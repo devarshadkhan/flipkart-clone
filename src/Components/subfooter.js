@@ -1,65 +1,215 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import payment from "./Images/payment.svg";
+import { Link } from "react-router-dom";
+import Logo from "./Images/logo.png";
+// import Payment from '../../payment.js';
 
 export default class subfooter extends Component {
   render() {
     return (
-      <footer class="flex-rw">
-  
-      <ul class="footer-list-top">
-        <li>
-          <h4 class="footer-list-header">About Pavilion</h4></li>
-        <li><a href='/' class="generic-anchor footer-list-anchor" itemprop="significantLink">GET TO KNOW US</a></li>
-        <li><a href='/' class="generic-anchor footer-list-anchor" itemprop="significantLink">PROMOS</a></li>
-        <li><a href='/' class="generic-anchor footer-list-anchor" itemprop="significantLink">BECOME A RETAILER</a></li>
-    
-        <li><a href='/' itemprop="significantLink" class="generic-anchor footer-list-anchor">JOB OPENINGS</a></li>
-    
-        <li><a href='/' class="generic-anchor footer-list-anchor" itemprop="significantLink">EVENTS</a></li>
-      </ul>
-      <ul class="footer-list-top">
-        <li>
-          <h4 class="footer-list-header">The Gift Selection</h4></li>
-    
-    
-        <li><a href='/' class="generic-anchor footer-list-anchor">ANGEL FIGURINES</a></li>
-        <li><a href='/' class="generic-anchor footer-list-anchor">HOME DECOR</a></li>
-        <li><a href='/' class="generic-anchor footer-list-anchor">MUGS</a></li>
-        <li><a href='/' class="generic-anchor footer-list-anchor">PET LOVER</a></li>
-        <li><a href='/' class="generic-anchor footer-list-anchor" target="_blank">HANDBAGS & JEWELRY</a></li>
-      </ul>
-      <ul class="footer-list-top">
-        <li id='help'>
-          <h4 class="footer-list-header">Please Help Me</h4></li>
-        <li><a href='/' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTACT</a></li>
-        <li><a href='/' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a></li>
-        <li id='find-a-store'><a href='/shop/store-locator' class="generic-anchor footer-list-anchor" itemprop="significantLink">STORE LOCATOR</a></li>
-        <li id='user-registration'><a href='/shop/user-registration?URL=' class="generic-anchor footer-list-anchor" itemprop="significantLink">NEW USERS</a></li>
-        <li id='order-tracking'><a href='/shop/order-status' itemprop="significantLink" class="generic-anchor footer-list-anchor">ORDER STATUS</a></li>
-      </ul>
-      <section class="footer-social-section flex-rw">
-          <span class="footer-social-overlap footer-social-connect">
-          CONNECT <span class="footer-social-small">with</span> US
-          </span>
-          <span class="footer-social-overlap footer-social-icons-wrapper">
-          <a href="/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
-          <a href="/" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
-          <a href="/" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
-          <a href="/" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
-          <a href="/" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
-          <a href="/" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
-          </span>
-      </section>
-      <section class="footer-bottom-section flex-rw">
-    <div class="footer-bottom-wrapper">   
-    <i class="fa fa-copyright" role="copyright">
-     
-    </i> 2019 Pavilion in <address class="footer-address" role="company address">Bergen, NY</address><span class="footer-bottom-rights"> - All Rights Reserved - </span>
-        </div>
-        <div class="footer-bottom-wrapper">
-        <a href="/" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+      <footer class="footer-section">
+        <div class="container-fluid">
+          <div class="footer-cta pt-3 pb-3">
+            <div class="row bag-14">
+              <div class="col-xl-4 col-md-4 mb-30">
+                <div class="single-cta">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div class="cta-text">
+                    <h4>Find us</h4>
+                    <span>B-01, 84, Block D, Sector 2, Noida, UP 201301</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                <div class="single-cta">
+                  <i class="fas fa-phone"></i>
+                  <div class="cta-text">
+                    <h4>Call us</h4>
+                    <span>9818xxxxxx</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                <div class="single-cta">
+                  <i class="far fa-envelope-open"></i>
+                  <div class="cta-text">
+                    <h4>Mail us</h4>
+                    <span>info@himotechglobal.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-      </section>
-    </footer>
-    )
+          <div class="footer-content pt-5 pb-5">
+            <div class="row bag-14">
+              <div class="col-xl-4 col-lg-4 mb-50">
+                <div class="footer-widget">
+                  <div class="footer-logo">
+                    <Link to="/">
+                      <img src={Logo} class="img-fluid" alt="logo" />
+                    </Link>
+                  </div>
+                  <div class="footer-text">
+                    <p>
+                      What's more, with our year-round shopping festivals and
+                      events, our prices are irresistible. We're sure you'll
+                      find yourself picking up more than what you had in mind.
+                      If you are wondering why you should shop from Flipkart
+                      when there are multiple options available to you, well,
+                      the below will answer your question.
+                    </p>
+                  </div>
+                  <div class="footer-social-icon">
+                    <span>Follow us</span>
+                    <Link to="/">
+                      <i class="fab fa-facebook-f facebook-bg"></i>
+                    </Link>
+                    <Link to="/">
+                      <i class="fab fa-twitter twitter-bg"></i>
+                    </Link>
+                    <Link to="/">
+                      <i class="fab fa-google-plus-g google-bg"></i>
+                    </Link>
+                    <Link to="/">
+                    
+                      <i class="fab fa-instagram instagram instagram-bg"></i>
+                    
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                <div class="footer-widget">
+                  <div class="footer-widget-heading">
+                    <h3>Product Categories</h3>
+                  </div>
+                  <ul>
+                    <li>
+                      {/* <Link to="/">MOBILES</Link> */}
+                      <Link to="/">Mobiles</Link>
+                    </li>
+                    <li>
+                      {/* <Link to="/">LARGE APPLIANCES</Link> */}
+                      <Link to="/">Large Appliance</Link>
+                    </li>
+                    <li>
+                      {/* <Link to="/">IPHONE</Link> */}
+                      <Link to="/">Iphone</Link>
+                    </li>
+                    <li>
+                      {/* <Link to="/">CAMERA</Link> */}
+                      <Link to="/">Camera</Link>
+                    </li>
+                    {/* <li>
+                      <Link to="/">LARGE APPLIANCES</Link>
+                    </li> */}
+                    <li>
+                      {/* <Link to="/">CLOTHING</Link> */}
+                      <Link to="/">Clothing</Link>
+                    </li>
+                    <li>
+                      {/* <Link to="/">FOOTWEAR</Link> */}
+                      <Link to="/">Footwear</Link>
+                    </li>
+                    <li>
+                      {/* <Link to="/">GROCERIES</Link> */}
+                      <Link to="/">Groceries</Link>
+                    </li>
+                    {/* <li>
+                      <Link to="/">Contact us</Link>
+                      <Link to="/">Contact us</Link>
+                    </li> */}
+                    <li>
+                      {/* <Link to="/">BEST SELLING ON FLIPKAR</Link> */}
+                      <Link to="/">Best Selling on Flipkart</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                <div class="footer-widget">
+                  <div class="footer-widget-heading">
+                    <h3>Useful Links</h3>
+                  </div>
+                  <ul>
+                    <li>
+                      <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                      <Link to="/">about</Link>
+                    </li>
+                    <li>
+                      <Link to="/">services</Link>
+                    </li>
+                    <li>
+                      <Link to="/">portfolio</Link>
+                    </li>
+                    {/* <li>
+                      <Link to="/">Contact</Link>
+                    </li> */}
+                    <li>
+                      <Link to="/">About us</Link>
+                    </li>
+                    <li>
+                      <Link to="/">Our Services</Link>
+                    </li>
+                    <li>
+                      <Link to="/">Faq</Link>
+                    </li>
+                    <li>
+                      <Link to="/">Contact us</Link>
+                    </li>
+                    <li>
+                      <Link to="/">Payments</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              {/* <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address"/>
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div> */}
+            </div>
+          </div>
+        </div>
+        <div class="copyright-area">
+          <div class="container-fluid">
+            <div class="row bag-14">
+              <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                <div class="copyright-text">
+                  <p>
+                    Copyright &copy; 2022, All Right Reserved{" "}
+                    <Link to="/">Himotech Global Technologies</Link>
+                  </p>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                <div class="footer-menu">
+                  <ul>
+                    <li>
+                      <Link to="/payment">
+                        <img src={payment} alt="" />
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    );
   }
 }

@@ -10,6 +10,8 @@
     "react": "^18.1.0",
     "react-animated-heart": "^0.0.7-alpha.1",
     "react-dom": "^18.1.0",
+    "react-download-link": "^2.3.0",
+    "react-modal-login": "^2.0.7",
     "react-owl-carousel": "^2.3.3",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
