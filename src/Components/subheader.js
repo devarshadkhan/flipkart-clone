@@ -1,25 +1,56 @@
-import React, { Component } from "react";
+import React, {useEffect, useState, } from 'react';
 import { Outlet, Link } from "react-router-dom";
 import $ from 'jquery'
-// import Filterpage1 from "./filterpage1";
-export default class subheader extends Component {
-  render() {
+import { useSelector } from "react-redux";
+import Menu from '@mui/material/Menu';
+import { Badge } from "@mui/material";
+import { useDispatch } from "react-redux";
 
-    $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
-      if (!$(this).next().hasClass('show')) {
-        $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
-      }
-      var $subMenu = $(this).next('.dropdown-menu');
-      $subMenu.toggleClass('show');
-    
-    
-      $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-        $('.dropdown-submenu .show').removeClass('show');
+
+const Subheader = ()=> {
+
+
+  // const [price,setPrice] = useState(0);
+  // console.log(price);
+
+        // const getdata = useSelector((state)=> state.cartreducer.carts);
+        // console.log(getdata);
+
+
+
+//  const dispatch = useDispatch();
+
+
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+      setAnchorEl(null);
+  };
+//   const dlt = (id)=>{
+//     dispatch(DLT(id))
+// }
+
+
+      $(document).ready(function() {  
+        $('#cartModal').modal('show');
       });
-    
-    
-      return false;
-    });
+
+$('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+  if (!$(this).next().hasClass('show')) {
+    $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
+  }
+  var $subMenu = $(this).next('.dropdown-menu');
+  $subMenu.toggleClass('show');
+
+
+  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+    $('.dropdown-submenu .show').removeClass('show');
+  });
+});
+
     return (
       <>
         <section className="subheader">
@@ -346,13 +377,42 @@ export default class subheader extends Component {
                   <li>
                     
                   </li>
+                  <li className="nav-item">
+                  {/* <Link to=""  onClick={handleClick}><i className="fa fa-cart-plus"></i>
+                  </Link> */}
+                  <Badge badgeContent={1} color="primary" id="basic-button"
+                        aria-controls={open ? 'basic-menu' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open ? 'true' : undefined}
+                        onClick={handleClick}>
+                            <i className="fa fa-cart-plus"></i>
+                  </Badge>
+                  </li>
+                {/* <Menu
+                    id="basic-menu"
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleClose}
+                    MenuListProps={{
+                        'aria-labelledby': 'basic-button',
+                    }}
+                /> */}
+
                 </ul>
               </div>
             </div>
           </nav>
         </section>
+
         <Outlet />
       </>
     );
   }
-}
+
+
+
+
+
+
+
+export default Subheader;

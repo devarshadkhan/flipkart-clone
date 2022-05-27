@@ -1,494 +1,406 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import Header from './header';
-import Subheader from './subheader';
-import Subfooter from './subfooter';
-// import Pagecount from './pagecount';
-import Asidefilter from './asidefilter';
-import Img14 from "./Images/img14.webp"
-export default class laptop extends Component {
-  render() {
-    return (
-                <>
-                <Header/>
-                <Subheader/>
-                    {/* <div class="container-fluid-fluid mb-3">
-	<div class="row">
-		<div class="col-md-12 bg-light border-bottom pt-5 pb-5">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Laptops & Notebooks</h2>
-						<ol class="breadcrumb p-0 m-0 bg-transparent">
-							<li class="breadcrumb-item"><Link to="/">Home</Link></li>
-							<li class="breadcrumb-item"><Link to="/">Electronics, Computers</Link></li>
-							<li class="breadcrumb-item active">Laptops & Notebooks</li>
-						</ol>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> */}
-<section class="filter">
-<div class="container-fluid">
-	<div class="row mb-5">
-<Asidefilter/>
-		<div class="col-md-9">
-			<div class="card">
-				<div class="card-header">
-					<div class="row bag-14">
-						<div class="col-md-5">
-							<div class="btn-group" role="group">
-								<button type="button" class="btn btn-secondary active bag-25"><i class="fas fa-th"></i></button>
-								<button type="button" class="btn btn-secondary bag-25"><i class="fas fa-th-list"></i></button>
-								<button type="button" class="btn btn-secondary bag-25">
-									<i class="fas fa-sync-alt"></i>
-									<span>cart (0)</span>
-								</button>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text">Sort By:</span>
-								</div>
-								<select class="form-control" id="" name="">
-									<option value="">Default</option>
-									<option value="">Name (Link - Z)</option>
-									<option value="">Name (Z - A)</option>
-									<option value="">Price (Low &gt; High)</option>
-									<option value="">Price (High &gt; Low)</option>
-									<option value="">Rating (Highest)</option>
-									<option value="">Rating (Lowest)</option>
-									<option value="">Model (Link - Z)</option>
-									<option value="">Model (Z - A)</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text">Show:</span>
-								</div>
-								<select class="form-control" id="" name="">
-									<option value="">15</option>
-									<option value="">25</option>
-									<option value="">50</option>
-									<option value="">75</option>
-									<option value="">100</option>
-								</select>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="card-body">
-	<div class="row bag-14">
-		<div class="col-md-4 mb-4">
-			<div class="card">
-				<img class="card-img-top" src={Img14} alt="" />
-				<div class="card-body">
-					<p class="h6"><small class="text-muted">Lenevo IdeaPad <br /></small>
-                            3 Core 11th Gen 8GB/256GB
-                    </p>
-					<p class="m-0">
-						<div className="star-rating">
-                        <ul className="list-inline">
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star-o"></i>
-                          </li>
-                        </ul>
+import React, {useState} from "react";
+import { Link } from "react-router-dom";
+import Header from "./header";
+import Subheader from "./Subheader";
+import Subfooter from "./subfooter";
+import Pagecount from './pagecount';
+import Asidefilter from "./asidefilter";
+// import Img14 from "./Images/img14.webp";
+import { useDispatch } from "react-redux";
+import Cardsdata from "./Cardsdata";
+import { ADD } from '../redux/actions/action';
+
+const Laptop = () => {
+
+  const [data,setData] = useState(Cardsdata);
+  // console.log(data);
+
+
+// const dispatch = useDispatch();
+
+
+  const send = (e)=>{
+    console.log(e);
+    // dispatch(ADD(e));
+  }
+
+
+  return (
+    <>
+      <Header />
+      <Subheader />
+
+      <section class="filter">
+        <div class="container-fluid">
+          <div class="row mb-5">
+            <Asidefilter />
+            <div class="col-md-9">
+              <div class="card">
+                <div class="card-header">
+                  <div class="row bag-14">
+                    <div class="col-md-5">
+                      <div class="btn-group" role="group">
+                        <button
+                          type="button"
+                          class="btn btn-secondary active bag-25"
+                        >
+                          <i class="fas fa-th"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary bag-25">
+                          <i class="fas fa-th-list"></i>
+                        </button>
+
+                        
+                        <button type="button" class="btn btn-secondary bag-25">
+                          <i class="fas fa-sync-alt"></i>
+                          <span>cart (0)</span>
+                        </button>
                       </div>
-					</p>
-					<p class="h5 m-0">$782.00</p>
-				</div>
-				<div class="card-footer">
-					<div class="btn-group" role="group">
-						<Link className="custom-btn btn-3 bag-26" to="/cart">
-                        <span>Add to cart</span>
-                      </Link>
-						<Link className="custom-btn btn-3 bag-26" to="/buynow">
-                        <span>BUY NOW</span>
-                      </Link>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 mb-4">
-			<div class="card">
-				<img class="card-img-top" src={Img14} alt="" />
-				<div class="card-body">
-					<p class="h6"><small class="text-muted">Lenevo IdeaPad <br /></small>
-                            3 Core 11th Gen 8GB/256GB
-                    </p>
-					<p class="m-0">
-						<div className="star-rating">
-                        <ul className="list-inline">
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star-o"></i>
-                          </li>
-                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Sort By:</span>
+                        </div>
+                        <select class="form-control" id="" name="">
+                          <option value="">Default</option>
+                          <option value="">Name (Link - Z)</option>
+                          <option value="">Name (Z - A)</option>
+                          <option value="">Price (Low &gt; High)</option>
+                          <option value="">Price (High &gt; Low)</option>
+                          <option value="">Rating (Highest)</option>
+                          <option value="">Rating (Lowest)</option>
+                          <option value="">Model (Link - Z)</option>
+                          <option value="">Model (Z - A)</option>
+                        </select>
                       </div>
-					</p>
-					<p class="h5 m-0">$782.00</p>
-				</div>
-				<div class="card-footer">
-					<div class="btn-group" role="group">
-						<Link className="custom-btn btn-3 bag-26" to="/cart">
-                        <span>Add to cart</span>
-                      </Link>
-						<Link className="custom-btn btn-3 bag-26" to="/buynow">
-                        <span>BUY NOW</span>
-                      </Link>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 mb-4">
-			<div class="card">
-				<img class="card-img-top" src={Img14} alt="" />
-				<div class="card-body">
-					<p class="h6"><small class="text-muted">Lenevo IdeaPad <br /></small>
-                            3 Core 11th Gen 8GB/256GB
-                    </p>
-					<p class="m-0">
-						<div className="star-rating">
-                        <ul className="list-inline">
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star-o"></i>
-                          </li>
-                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Show:</span>
+                        </div>
+                        <select class="form-control" id="" name="">
+                          <option value="">15</option>
+                          <option value="">25</option>
+                          <option value="">50</option>
+                          <option value="">75</option>
+                          <option value="">100</option>
+                        </select>
                       </div>
-					</p>
-					<p class="h5 m-0">$782.00</p>
-				</div>
-				<div class="card-footer">
-					<div class="btn-group" role="group">
-						<Link className="custom-btn btn-3 bag-26" to="/cart">
-                        <span>Add to cart</span>
-                      </Link>
-						<Link className="custom-btn btn-3 bag-26" to="/buynow">
-                        <span>BUY NOW</span>
-                      </Link>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 mb-4">
-			<div class="card">
-				<img class="card-img-top" src={Img14} alt="" />
-				<div class="card-body">
-					<p class="h6"><small class="text-muted">Lenevo IdeaPad <br /></small>
-                            3 Core 11th Gen 8GB/256GB
-                    </p>
-					<p class="m-0">
-						<div className="star-rating">
-                        <ul className="list-inline">
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star-o"></i>
-                          </li>
-                        </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {
+          data.map((element, id) => {
+            return (
+              <>
+               <div className="row">
+               <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <img class="card-img-top" src={element.imgdata} alt="" />
+                    <div class="card-body">
+                      <p class="h6">
+                        {/* <small class="text-muted">
+                       
+                         <br />
+                        </small> */}
+                        {element.rname}
+                        
+                      </p>
+                      <p class="m-0">
+                        <div className="star-rating">
+                          <ul className="list-inline">
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star-o"></i>
+                            </li>
+                          </ul>
+                        </div>
+                      </p>
+                      <p class="h5 m-0">$782.00</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="btn-group" role="group">
+                        <Link className="custom-btn btn-3 bag-26" to="" type="button" 
+                        onClick={()=> send(element)}>
+                          <span>Add to cart</span>
+                        </Link>
+                        <Link className="custom-btn btn-3 bag-26" to="/buynow">
+                          <span>BUY NOW</span>
+                        </Link>
                       </div>
-					</p>
-					<p class="h5 m-0">$782.00</p>
-				</div>
-				<div class="card-footer">
-					<div class="btn-group" role="group">
-						<Link className="custom-btn btn-3 bag-26" to="/cart">
-                        <span>Add to cart</span>
-                      </Link>
-						<Link className="custom-btn btn-3 bag-26" to="/buynow">
-                        <span>BUY NOW</span>
-                      </Link>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 mb-4">
-			<div class="card">
-				<img class="card-img-top" src={Img14} alt="" />
-				<div class="card-body">
-					<p class="h6"><small class="text-muted">Lenevo IdeaPad <br /></small>
-                            3 Core 11th Gen 8GB/256GB
-                    </p>
-					<p class="m-0">
-						<div className="star-rating">
-                        <ul className="list-inline">
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star-o"></i>
-                          </li>
-                        </ul>
+                    </div>
+                  </div>
+                </div>
+               <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <img class="card-img-top" src={element.imgdata} alt="" />
+                    <div class="card-body">
+                      <p class="h6">
+                        {/* <small class="text-muted">
+                       
+                         <br />
+                        </small> */}
+                        {element.rname}
+                        
+                      </p>
+                      <p class="m-0">
+                        <div className="star-rating">
+                          <ul className="list-inline">
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star-o"></i>
+                            </li>
+                          </ul>
+                        </div>
+                      </p>
+                      <p class="h5 m-0">$782.00</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="btn-group" role="group">
+                        <Link className="custom-btn btn-3 bag-26" to="" type="button" 
+                        onClick={()=> send(element)}>
+                          <span>Add to cart</span>
+                        </Link>
+                        <Link className="custom-btn btn-3 bag-26" to="/buynow">
+                          <span>BUY NOW</span>
+                        </Link>
                       </div>
-					</p>
-					<p class="h5 m-0">$782.00</p>
-				</div>
-				<div class="card-footer">
-					<div class="btn-group" role="group">
-						<Link className="custom-btn btn-3 bag-26" to="/cart">
-                        <span>Add to cart</span>
-                      </Link>
-						<Link className="custom-btn btn-3 bag-26" to="/buynow">
-                        <span>BUY NOW</span>
-                      </Link>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 mb-4">
-			<div class="card">
-				<img class="card-img-top" src={Img14} alt="" />
-				<div class="card-body">
-					<p class="h6"><small class="text-muted">Lenevo IdeaPad <br /></small>
-                            3 Core 11th Gen 8GB/256GB
-                    </p>
-					<p class="m-0">
-						<div className="star-rating">
-                        <ul className="list-inline">
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star-o"></i>
-                          </li>
-                        </ul>
+                    </div>
+                  </div>
+                </div>
+               <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <img class="card-img-top" src={element.imgdata} alt="" />
+                    <div class="card-body">
+                      <p class="h6">
+                        {/* <small class="text-muted">
+                       
+                         <br />
+                        </small> */}
+                        {element.rname}
+                        
+                      </p>
+                      <p class="m-0">
+                        <div className="star-rating">
+                          <ul className="list-inline">
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star-o"></i>
+                            </li>
+                          </ul>
+                        </div>
+                      </p>
+                      <p class="h5 m-0">$782.00</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="btn-group" role="group">
+                        <Link className="custom-btn btn-3 bag-26" to="" type="button" 
+                        onClick={()=> send(element)}>
+                          <span>Add to cart</span>
+                        </Link>
+                        <Link className="custom-btn btn-3 bag-26" to="/buynow">
+                          <span>BUY NOW</span>
+                        </Link>
                       </div>
-					</p>
-					<p class="h5 m-0">$782.00</p>
-				</div>
-				<div class="card-footer">
-					<div class="btn-group" role="group">
-						<Link className="custom-btn btn-3 bag-26" to="/cart">
-                        <span>Add to cart</span>
-                      </Link>
-						<Link className="custom-btn btn-3 bag-26" to="/buynow">
-                        <span>BUY NOW</span>
-                      </Link>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 mb-4">
-			<div class="card">
-				<img class="card-img-top" src={Img14} alt="" />
-				<div class="card-body">
-					<p class="h6"><small class="text-muted">Lenevo IdeaPad <br /></small>
-                            3 Core 11th Gen 8GB/256GB
-                    </p>
-					<p class="m-0">
-						<div className="star-rating">
-                        <ul className="list-inline">
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star-o"></i>
-                          </li>
-                        </ul>
+                    </div>
+                  </div>
+                </div>
+               <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <img class="card-img-top" src={element.imgdata} alt="" />
+                    <div class="card-body">
+                      <p class="h6">
+                        {/* <small class="text-muted">
+                       
+                         <br />
+                        </small> */}
+                        {element.rname}
+                        
+                      </p>
+                      <p class="m-0">
+                        <div className="star-rating">
+                          <ul className="list-inline">
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star-o"></i>
+                            </li>
+                          </ul>
+                        </div>
+                      </p>
+                      <p class="h5 m-0">$782.00</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="btn-group" role="group">
+                        <Link className="custom-btn btn-3 bag-26" to="" type="button" 
+                        onClick={()=> send(element)}>
+                          <span>Add to cart</span>
+                        </Link>
+                        <Link className="custom-btn btn-3 bag-26" to="/buynow">
+                          <span>BUY NOW</span>
+                        </Link>
                       </div>
-					</p>
-					<p class="h5 m-0">$782.00</p>
-				</div>
-				<div class="card-footer">
-					<div class="btn-group" role="group">
-						<Link className="custom-btn btn-3 bag-26" to="/cart">
-                        <span>Add to cart</span>
-                      </Link>
-						<Link className="custom-btn btn-3 bag-26" to="/buynow">
-                        <span>BUY NOW</span>
-                      </Link>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 mb-4">
-			<div class="card">
-				<img class="card-img-top" src={Img14} alt="" />
-				<div class="card-body">
-					<p class="h6"><small class="text-muted">Lenevo IdeaPad <br /></small>
-                            3 Core 11th Gen 8GB/256GB
-                    </p>
-					<p class="m-0">
-						<div className="star-rating">
-                        <ul className="list-inline">
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star-o"></i>
-                          </li>
-                        </ul>
+                    </div>
+                  </div>
+                </div>
+               <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <img class="card-img-top" src={element.imgdata} alt="" />
+                    <div class="card-body">
+                      <p class="h6">
+                        {/* <small class="text-muted">
+                       
+                         <br />
+                        </small> */}
+                        {element.rname}
+                        
+                      </p>
+                      <p class="m-0">
+                        <div className="star-rating">
+                          <ul className="list-inline">
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star-o"></i>
+                            </li>
+                          </ul>
+                        </div>
+                      </p>
+                      <p class="h5 m-0">$782.00</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="btn-group" role="group">
+                        <Link className="custom-btn btn-3 bag-26" to="" type="button" 
+                        onClick={()=> send(element)}>
+                          <span>Add to cart</span>
+                        </Link>
+                        <Link className="custom-btn btn-3 bag-26" to="/buynow">
+                          <span>BUY NOW</span>
+                        </Link>
                       </div>
-					</p>
-					<p class="h5 m-0">$782.00</p>
-				</div>
-				<div class="card-footer">
-					<div class="btn-group" role="group">
-						<Link className="custom-btn btn-3 bag-26" to="/cart">
-                        <span>Add to cart</span>
-                      </Link>
-						<Link className="custom-btn btn-3 bag-26" to="/buynow">
-                        <span>BUY NOW</span>
-                      </Link>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 mb-4">
-			<div class="card">
-				<img class="card-img-top" src={Img14} alt="" />
-				<div class="card-body">
-					<p class="h6"><small class="text-muted">Lenevo IdeaPad <br /></small>
-                            3 Core 11th Gen 8GB/256GB
-                    </p>
-					<p class="m-0">
-						<div className="star-rating">
-                        <ul className="list-inline">
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star"></i>
-                          </li>
-                          <li className="list-inline-item">
-                            <i className="fa fa-star-o"></i>
-                          </li>
-                        </ul>
+                    </div>
+                  </div>
+                </div>
+               <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <img class="card-img-top" src={element.imgdata} alt="" />
+                    <div class="card-body">
+                      <p class="h6">
+                        {/* <small class="text-muted">
+                       
+                         <br />
+                        </small> */}
+                        {element.rname}
+                        
+                      </p>
+                      <p class="m-0">
+                        <div className="star-rating">
+                          <ul className="list-inline">
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star"></i>
+                            </li>
+                            <li className="list-inline-item">
+                              <i className="fa fa-star-o"></i>
+                            </li>
+                          </ul>
+                        </div>
+                      </p>
+                      <p class="h5 m-0">$782.00</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="btn-group" role="group">
+                        <Link className="custom-btn btn-3 bag-26" to="" type="button" 
+                        onClick={()=> send(element)}>
+                          <span>Add to cart</span>
+                        </Link>
+                        <Link className="custom-btn btn-3 bag-26" to="/buynow">
+                          <span>BUY NOW</span>
+                        </Link>
                       </div>
-					</p>
-					<p class="h5 m-0">$782.00</p>
-				</div>
-				<div class="card-footer">
-					<div class="btn-group" role="group">
-						<Link className="custom-btn btn-3 bag-26" to="/cart">
-                        <span>Add to cart</span>
-                      </Link>
-						<Link className="custom-btn btn-3 bag-26" to="/buynow">
-                        <span>BUY NOW</span>
-                      </Link>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		{/* <Pagecount/> */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		</div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </section>
-                <Subfooter/>
+                    </div>
+                  </div>
+                </div>
+                <Pagecount/>
+               </div>
                 </>
 
-
-    );
-  };
+                )
+          })
+        }
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+     
+      <Subfooter />
+    </>
+  );
 };
+export default Laptop;

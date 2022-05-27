@@ -26,6 +26,27 @@ export default class slide extends Component {
                   navigation={true}
                   modules={[Navigation]}
                   className="mySwiper"
+                  breakpoints={{
+                        576: {
+                          width: 576,
+                          slidesPerView: 1,
+                        },
+                        768: {
+                          width: 768,
+                          slidesPerView: 1,
+                        },
+                        1200: {
+                          width: 1332,
+                          slidesPerView: 1,
+                        },
+                      }}
+
+      spaceBetween={0}
+      slidesPerView={1}
+      // pagination={{ clickable: true }}
+      // scrollbar={{ draggable: true }}
+      // onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log("slide change")}
                 >
                   <SwiperSlide
                     style={{ backgroundImage: `url(${background})` }}

@@ -741,7 +741,6 @@ export default class asidefilter extends Component {
                       {/* <div class="card-footer">
 					<button type="button" class="custom-btn btn-3">Filter</button>
 				</div> */}
-                      
                     </div>
                   </div>
                 </div>
@@ -749,10 +748,14 @@ export default class asidefilter extends Component {
 
               <div class="text-right refine">
                 {" "}
-                <Link className="custom-btn btn-3 bag-27" id="button-filter" to="/buynow">
-                        <span>Filter</span>
-                      </Link>
-                      </div>
+                <Link
+                  className="custom-btn btn-3 bag-27"
+                  id="button-filter"
+                  to="/buynow"
+                >
+                  <span>Filter</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../header.js";
-import Subheader from "../../subheader.js";
+import Subheader from "../../Subheader.js";
 import Footer from "../../subfooter.js";
 import Slide from "../../slide.js";
 import Offer from "../../offer.js";
@@ -126,7 +126,6 @@ export default class home extends Component {
                 autoplay={true}
     autoplayTimeout={2000}
     responsive={this.state.responsive}
-                
               >
                 <div className="item">
                   <div className="thumb-wrapper ">
