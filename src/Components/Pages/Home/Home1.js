@@ -56,7 +56,7 @@ import img40 from "../../Images/img40.webp";
 // import $ from 'jquery';
 require("react-owl-carousel");
 
-export default class Home extends Component {
+export default class Home1 extends Component {
   // state = {
   //   date: new Date()
   // }
