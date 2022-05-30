@@ -13,7 +13,7 @@ export class ErrorPage extends Component {
 
         <section class="forms-24 ">
           <div class="form-25-mian">
-            <div class="wrapper">
+            <div class="wrappers">
               <div>
                 <h4 class="page-head">Ecommerce Error Page</h4>
               </div>
