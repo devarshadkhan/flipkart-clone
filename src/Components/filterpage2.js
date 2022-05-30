@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
 import { Link } from "react-router-dom";
-import Header from "./header";
+import Header from "./Header";
 import Subheader from "./Subheader";
-import Subfooter from "./subfooter";
+import Subfooter from "./Subfooter";
 // import $ from "jquery"
-export default class filterpage2 extends Component {
+export default class Filterpage2 extends Component {
   render() {
     return (
       <>

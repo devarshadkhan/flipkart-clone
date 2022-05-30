@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Header from "./header";
+import Header from "./Header";
 import Subheader from "./Subheader";
-import Subfooter from "./subfooter";
-import Asidefilter from "./asidefilter";
+import Subfooter from "./Subfooter";
+import Asidefilter from "./Asidefilter";
 // import Img46 from "./Components/Images/img46.webp"
 import Img46 from "./Images/img46.webp";
-import Pagecount from "./pagecount";
-export default class desktop extends Component {
+import Pagecount from "./Pagecount";
+export default class Desktop extends Component {
   render() {
     return (
       <>
@@ -117,7 +117,7 @@ export default class desktop extends Component {
                             <div class="btn-group" role="group">
                               <Link
                                 className="custom-btn btn-3 bag-26"
-                                to="/cart"
+                                to=""
                               >
                                 <span>Add to cart</span>
                               </Link>
@@ -168,7 +168,7 @@ export default class desktop extends Component {
                             <div class="btn-group" role="group">
                               <Link
                                 className="custom-btn btn-3 bag-26"
-                                to="/cart"
+                                to=""
                               >
                                 <span>Add to cart</span>
                               </Link>
@@ -219,7 +219,7 @@ export default class desktop extends Component {
                             <div class="btn-group" role="group">
                               <Link
                                 className="custom-btn btn-3 bag-26"
-                                to="/cart"
+                                to=""
                               >
                                 <span>Add to cart</span>
                               </Link>
@@ -270,7 +270,7 @@ export default class desktop extends Component {
                             <div class="btn-group" role="group">
                               <Link
                                 className="custom-btn btn-3 bag-26"
-                                to="/cart"
+                                to=""
                               >
                                 <span>Add to cart</span>
                               </Link>
@@ -321,7 +321,7 @@ export default class desktop extends Component {
                             <div class="btn-group" role="group">
                               <Link
                                 className="custom-btn btn-3 bag-26"
-                                to="/cart"
+                                to=""
                               >
                                 <span>Add to cart</span>
                               </Link>
@@ -372,7 +372,7 @@ export default class desktop extends Component {
                             <div class="btn-group" role="group">
                               <Link
                                 className="custom-btn btn-3 bag-26"
-                                to="/cart"
+                                to=""
                               >
                                 <span>Add to cart</span>
                               </Link>
@@ -423,7 +423,7 @@ export default class desktop extends Component {
                             <div class="btn-group" role="group">
                               <Link
                                 className="custom-btn btn-3 bag-26"
-                                to="/cart"
+                                to=""
                               >
                                 <span>Add to cart</span>
                               </Link>
@@ -474,7 +474,7 @@ export default class desktop extends Component {
                             <div class="btn-group" role="group">
                               <Link
                                 className="custom-btn btn-3 bag-26"
-                                to="/cart"
+                                to=""
                               >
                                 <span>Add to cart</span>
                               </Link>
@@ -525,7 +525,7 @@ export default class desktop extends Component {
                             <div class="btn-group" role="group">
                               <Link
                                 className="custom-btn btn-3 bag-26"
-                                to="/cart"
+                                to=""
                               >
                                 <span>Add to cart</span>
                               </Link>

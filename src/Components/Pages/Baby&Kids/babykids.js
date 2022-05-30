@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class babykids extends Component {
+export default class Babykids extends Component {
   render() {
     return (
       <div>baby&kids</div>

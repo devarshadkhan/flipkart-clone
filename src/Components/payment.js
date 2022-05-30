@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
-import Header from "./header.js";
+import Header from "./Header.js";
 import Subheader from "./Subheader.js";
-import Subfooter from "./subfooter.js";
+import Subfooter from "./Subfooter.js";
 export default class payment extends Component {
   render() {
     $(function () {

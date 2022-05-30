@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-export default class asidefilter extends Component {
+export default class Asidefilter extends Component {
   render() {
     return (
       <>

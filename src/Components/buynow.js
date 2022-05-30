@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Header from "./header.js";
+import Header from "./Header.js";
 import Subheader from "./Subheader.js";
 import { Link } from "react-router-dom";
-import Subfooter from "./subfooter.js";
+import Subfooter from "./Subfooter.js";
 // import Payment from '../../payment.js';
 import OwlCarousel from "react-owl-carousel";
 // import Heart from "react-animated-heart";
@@ -24,7 +24,7 @@ import img52 from "./Images/img52.webp";
 import img53 from "./Images/img53.png";
 import img54 from "./Images/img54.svg";
 
-export default class buynow extends Component {
+export default class Buynow extends Component {
   state = {
     responsive: {
       0: {

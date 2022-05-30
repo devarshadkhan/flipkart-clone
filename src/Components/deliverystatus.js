@@ -3,7 +3,7 @@ import Img42 from "./Images/img42.png"
 import Img43 from "./Images/img43.png"
 import Img45 from "./Images/img45.png"
 import Img44 from "./Images/img44.webp"
-export default class deliverystatus extends Component {
+export default class Deliverystatus extends Component {
   render() {
     return (
       <>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {  Link } from "react-router-dom";
-export default class breadcum extends Component {
+export default class Breadcum extends Component {
   render() {
     return (
      <><div className="wrap-5">

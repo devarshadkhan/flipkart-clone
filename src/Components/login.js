@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Header from "./header";
+import Header from "./Header";
 import Subheader from "./Subheader";
 import $ from "jquery";
-export default class login extends Component {
+export default class Login extends Component {
   render() {
     $(".message a").click(function () {
       $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");

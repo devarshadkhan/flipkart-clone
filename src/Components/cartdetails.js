@@ -1,11 +1,11 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import Img14 from "./Images/img14.webp";
-import Header from './header';
+import Header from './Header';
 import Subheader from './Subheader';
-import Subfooter from './subfooter';
+import Subfooter from './Subfooter';
 
-function cartdetails() {
+function Cartdetails() {
 
 
 
@@ -53,4 +53,4 @@ function cartdetails() {
   )
 }
 
-export default cartdetails
+export default Cartdetails

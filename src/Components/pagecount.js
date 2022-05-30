@@ -3,7 +3,7 @@ import $  from "jquery"
 import { Link } from 'react-router-dom';
 import { Stack } from '@mui/material';
 import { Pagination } from '@mui/material';
-export default class pagecount extends Component {
+export default class Pagecount extends Component {
   render() {
    
     return (

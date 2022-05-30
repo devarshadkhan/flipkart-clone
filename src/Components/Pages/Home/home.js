@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Header from "../../header.js";
+import Header from "../../Header.js";
 import Subheader from "../../Subheader.js";
-import Footer from "../../subfooter.js";
-import Slide from "../../slide.js";
-import Offer from "../../offer.js";
-import Delivery from "../../delivery.js";
-import Deliverystatus from "../../deliverystatus.js";
+import Footer from "../../Subfooter.js";
+import Slide from "../../Slide.js";
+import Offer from "../../Offer.js";
+import Delivery from "../../Delivery.js";
+import Deliverystatus from "../../Deliverystatus.js";
 
 
 // import Payment from '../../payment.js';
@@ -56,7 +56,7 @@ import img40 from "../../Images/img40.webp";
 // import $ from 'jquery';
 require("react-owl-carousel");
 
-export default class home extends Component {
+export default class Home extends Component {
   // state = {
   //   date: new Date()
   // }

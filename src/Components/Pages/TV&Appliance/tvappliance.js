@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Header from '../../header'
-export default class tvappliance extends Component {
+import Header from '../../Header'
+export default class Tvappliance extends Component {
   render() {
     return (
       <>
