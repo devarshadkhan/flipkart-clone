@@ -7,4 +7,4 @@ const rootred = combineReducers({
 });
 
 
-export default rootred
+export default rootred 
