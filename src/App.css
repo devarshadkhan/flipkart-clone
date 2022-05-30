@@ -2,6 +2,7 @@ body {
   background: #ebe8e8;
   font-family: "fira sans";
 }
+html{scroll-behavior: smooth;}
 .row {
   background-color: #fff;
 }

@@ -76,7 +76,7 @@ $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
                         {/* Submwnu */}
                         <ul class="dropdown-menu">
                           <li>
-                          <Link to="/" className="dropdown-item">All</Link>
+                          <Link to="/"  className="dropdown-item">All</Link>
                           </li>
                             <li >
                             <Link to="/desktop"  className="dropdown-item" data-toggle="dropdown">Computers Pheripherals</Link>
