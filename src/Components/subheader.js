@@ -202,11 +202,7 @@ $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
                             </ul>
                             </li>
                           </ul>
-
-                         
-
-                          
-                          </li>
+                       </li>
                 
 
                   <li className="nav-item">

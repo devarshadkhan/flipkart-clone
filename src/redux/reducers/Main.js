@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
-import { cartreducer } from "./Reducer";
+import { cartreducer } from "./Arsh";
 
 
 const rootred = combineReducers({
