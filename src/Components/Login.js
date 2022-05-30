@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Header from "./Header1";
-import Subheader from "./Subheader1";
+import Header from "./Header";
+import Subheader from "./Subheader";
 import $ from "jquery";
 export default class Login extends Component {
   render() {

@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 import { Link } from "react-router-dom";
 import Header from "./Header";
-import Subheader from "./Subheader1";
-import Subfooter from "./Subfooter1";
+import Subheader from "./Subheader";
+import Subfooter from "./Subfooter";
 // import $ from "jquery"
 export default class Filterpage2 extends Component {
   render() {

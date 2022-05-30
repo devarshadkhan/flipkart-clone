@@ -1,13 +1,13 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import Header from "./Header1";
-import Subheader from "./Subheader1";
-import Subfooter from "./Subfooter1";
-import Pagecount from './Pagecount1';
-import Asidefilter from "./Asidefilter1";
+import Header from "./Header";
+import Subheader from "./Subheader";
+import Subfooter from "./Subfooter";
+import Pagecount from './Pagecount';
+import Asidefilter from "./Asidefilter";
 // import Img14 from "./Images/img14.webp";
 import { useDispatch } from "react-redux";
-import Cardsdata from "./Cardsdata1";
+import Cardsdata from "./Cardsdata";
 import { ADD } from '../redux/Actions/Action';
 
 const Laptop = () => {

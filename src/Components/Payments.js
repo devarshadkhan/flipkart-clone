@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
-import Header from "./Header1.js";
-import Subheader from "./Subheader1.js";
-import Subfooter from "./Subfooter1.js";
-export default class payment extends Component {
+import Header from "./Header.js";
+import Subheader from "./Subheader.js";
+import Subfooter from "./Subfooter.js";
+export default class Payment extends Component {
   render() {
     $(function () {
       $('[data-toggle="popover"]').popover();

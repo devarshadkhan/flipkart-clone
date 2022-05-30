@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Header from "./Header1.js";
-import Subheader from "./Subheader1.js";
+import Header from "./Header.js";
+import Subheader from "./Subheader.js";
 import { Link } from "react-router-dom";
-import Subfooter from "./Subfooter1.js";
+import Subfooter from "./Subfooter.js";
 // import Payment from '../../payment.js';
 import OwlCarousel from "react-owl-carousel";
 // import Heart from "react-animated-heart";

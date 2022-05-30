@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Header from "../../Header1.js";
-import Subheader from "../../Subheader1.js";
-import Footer from "../../Subfooter1.js";
-import Slide from "../../Slide1.js";
-import Offer from "../../Offer1.js";
+import Header from "../../Header.js";
+import Subheader from "../../Subheader.js";
+import Footer from "../../Subfooter.js";
+import Slide from "../../Slide.js";
+import Offer from "../../Offer.js";
 import Delivery from "../../Delivery.js";
-import Deliverystatus from "../../Deliverystatus1.js";
+import Deliverystatus from "../../Deliverystatus.js";
 
 
 // import Payment from '../../payment.js';
