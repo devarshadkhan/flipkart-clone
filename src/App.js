@@ -24,7 +24,7 @@ import Pagecount from './Components/Pagecount';
 import Cartdetails from './Components/Cartdetails';
 // import store from './store';
 // import { Provider } from 'react-redux';
-
+import ErrorPage from './Components/ErrorPage';
 
 function App() {
   return (
@@ -48,6 +48,7 @@ function App() {
           <Route path="/desktop" element={<Desktop />} />
           <Route path="/pagecount" element={<Pagecount />} />
           <Route path="/cartdetails" element={<Cartdetails />} />
+          <Route path="*" element={<ErrorPage />} />
           {/* <Route store={store} element={<Provider />} /> */}
         </Routes>
       </BrowserRouter>

@@ -8,7 +8,7 @@ import Asidefilter from "./Asidefilter";
 // import Img14 from "./Images/img14.webp";
 import { useDispatch } from "react-redux";
 import Cardsdata from "./Cardsdata";
-import { ADD } from '../redux/actions/Action';
+import { ADD } from '../redux/Actions/Action';
 
 const Laptop = () => {
 
@@ -29,7 +29,6 @@ const Laptop = () => {
     <>
       <Header />
       <Subheader />
-
       <section class="filter">
         <div class="container-fluid">
           <div class="row mb-5">
