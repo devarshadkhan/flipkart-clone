@@ -5,7 +5,7 @@ import Subheader from "../../Subheader1.js";
 import Footer from "../../Subfooter1.js";
 import Slide from "../../Slide1.js";
 import Offer from "../../Offer1.js";
-import Delivery from "../../Delivery1.js";
+import Delivery from "../../Delivery.js";
 import Deliverystatus from "../../Deliverystatus1.js";
 
 
@@ -56,7 +56,7 @@ import img40 from "../../Images/img40.webp";
 // import $ from 'jquery';
 require("react-owl-carousel");
 
-export default class Home1 extends Component {
+export default class Home extends Component {
   // state = {
   //   date: new Date()
   // }

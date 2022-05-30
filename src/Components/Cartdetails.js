@@ -5,7 +5,7 @@ import Header from './Header1';
 import Subheader from './Subheader1';
 import Subfooter from './Subfooter1';
 
-function Cartdetails1() {
+function Cartdetails() {
 
 
 
@@ -53,4 +53,4 @@ function Cartdetails1() {
   )
 }
 
-export default Cartdetails1
+export default Cartdetails
