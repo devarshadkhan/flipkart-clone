@@ -24,7 +24,7 @@ import img52 from "./Images/img52.webp";
 import img53 from "./Images/img53.png";
 import img54 from "./Images/img54.svg";
 
-export default class Buynow extends Component {
+export default class Buynow1 extends Component {
   state = {
     responsive: {
       0: {

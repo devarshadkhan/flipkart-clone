@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import "swiper/css/bundle";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Electronics from './Components/Pages/Electronics/Electronics.js';
+import Electronics from './Components/Pages/Electronics/Electronics1.js';
 import Men from './Components/Pages/Men/Men1.js';
 import Women from './Components/Pages/Women/Women1.js';
 import Tvappliance from './Components/Pages/TV&Appliance/Tvappliance1.js';

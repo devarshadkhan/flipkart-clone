@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {  Link } from "react-router-dom";
-export default class Delivery extends Component {
+export default class Delivery1 extends Component {
   render() {
     return (
       <>
