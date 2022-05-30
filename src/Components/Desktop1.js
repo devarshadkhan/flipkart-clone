@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Header from "./Header";
-import Subheader from "./Subheader";
-import Subfooter from "./Subfooter";
-import Asidefilter from "./Asidefilter";
+import Header from "./Header1";
+import Subheader from "./Subheader1";
+import Subfooter from "./Subfooter1";
+import Asidefilter from "./Asidefilter1";
 // import Img46 from "./Components/Images/img46.webp"
 import Img46 from "./Images/img46.webp";
-import Pagecount from "./Pagecount";
+import Pagecount from "./Pagecount1";
 export default class Desktop extends Component {
   render() {
     return (

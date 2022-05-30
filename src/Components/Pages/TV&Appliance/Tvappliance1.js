@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import Header from '../../Header'
+import Header from '../../Header1'
 export default class Tvappliance extends Component {
   render() {
     return (
       <>
         <Header/>
-        <div>TVs & Appliances</div>
+        <div>TVs & Appliancesss</div>
       </>
     )
   }

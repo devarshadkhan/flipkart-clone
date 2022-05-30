@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Error from "../Components/Images/error.jpg";
-import Header from "./Header";
-import Subheader from "./Subheader";
-import Subfooter from "./Subfooter";
+import Header from "./Header1";
+import Subheader from "./Subheader1";
+import Subfooter from "./Subfooter1";
 import { Link } from "react-router-dom";
 export class ErrorPage extends Component {
   render() {

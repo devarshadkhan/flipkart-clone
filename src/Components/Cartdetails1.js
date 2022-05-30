@@ -1,9 +1,9 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import Img14 from "./Images/img14.webp";
-import Header from './Header';
-import Subheader from './Subheader';
-import Subfooter from './Subfooter';
+import Header from './Header1';
+import Subheader from './Subheader1';
+import Subfooter from './Subfooter1';
 
 function Cartdetails() {
 
