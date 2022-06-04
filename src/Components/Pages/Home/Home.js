@@ -123,9 +123,10 @@ export default class Home extends Component {
                 nav
                 items={6}
                 dots={false}
-                autoplay={false}
+                autoplay={true}
     autoplayTimeout={2000}
     responsive={this.state.responsive}
+    autoplayHoverPause
               >
                 <div className="item">
                   <div className="thumb-wrapper ">
@@ -423,9 +424,10 @@ export default class Home extends Component {
                 nav
                 items={6}
                 dots={false}
-                autoplay={false}
+                autoplay={true}
     autoplayTimeout={2000}
     responsive={this.state.responsive}
+    autoplayHoverPause
               >
                 <div className="item">
                   <div className="thumb-wrapper">
@@ -717,9 +719,10 @@ export default class Home extends Component {
                 nav
                 items={6}
                 dots={false}
-                autoplay={false}
+                autoplay={true}
     autoplayTimeout={2000}
     responsive={this.state.responsive}
+    autoplayHoverPause
               >
                 <div className="item">
                   <div className="thumb-wrapper">
@@ -1011,9 +1014,10 @@ export default class Home extends Component {
                 nav
                 items={6}
                 dots={false}
-                autoplay={false}
+                autoplay={true}
     autoplayTimeout={2000}
     responsive={this.state.responsive}
+    autoplayHoverPause
               >
                 <div className="item">
                   <div className="thumb-wrapper">
@@ -1302,9 +1306,10 @@ export default class Home extends Component {
                 nav
                 items={6}
                 dots={false}
-                autoplay={false}
+                autoplay={true}
     autoplayTimeout={2000}
     responsive={this.state.responsive}
+    autoplayHoverPause
               >
                 <div className="item">
                   <div className="thumb-wrapper">
@@ -1630,9 +1635,10 @@ export default class Home extends Component {
                 nav
                 items={6}
                 dots={false}
-                autoplay={false}
+                autoplay={true}
     autoplayTimeout={2000}
     responsive={this.state.responsive}
+    autoplayHoverPause
               >
                 <div className="item">
                   <div className="thumb-wrapper">
