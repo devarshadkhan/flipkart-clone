@@ -199,7 +199,7 @@ export default class subfooter extends Component {
                 <div class="footer-menu">
                   <ul>
                     <li>
-                      <Link to="/payment">
+                      <Link to="/payments">
                         <img src={payment} alt="" />
                       </Link>
                     </li>

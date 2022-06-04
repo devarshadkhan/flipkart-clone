@@ -123,7 +123,7 @@ export default class Home extends Component {
                 nav
                 items={6}
                 dots={false}
-                autoplay={true}
+                autoplay={false}
     autoplayTimeout={2000}
     responsive={this.state.responsive}
               >
@@ -423,7 +423,7 @@ export default class Home extends Component {
                 nav
                 items={6}
                 dots={false}
-                autoplay={true}
+                autoplay={false}
     autoplayTimeout={2000}
     responsive={this.state.responsive}
               >
@@ -717,7 +717,7 @@ export default class Home extends Component {
                 nav
                 items={6}
                 dots={false}
-                autoplay={true}
+                autoplay={false}
     autoplayTimeout={2000}
     responsive={this.state.responsive}
               >
@@ -1011,7 +1011,7 @@ export default class Home extends Component {
                 nav
                 items={6}
                 dots={false}
-                autoplay={true}
+                autoplay={false}
     autoplayTimeout={2000}
     responsive={this.state.responsive}
               >
@@ -1302,7 +1302,7 @@ export default class Home extends Component {
                 nav
                 items={6}
                 dots={false}
-                autoplay={true}
+                autoplay={false}
     autoplayTimeout={2000}
     responsive={this.state.responsive}
               >
@@ -1630,7 +1630,7 @@ export default class Home extends Component {
                 nav
                 items={6}
                 dots={false}
-                autoplay={true}
+                autoplay={false}
     autoplayTimeout={2000}
     responsive={this.state.responsive}
               >

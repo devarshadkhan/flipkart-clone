@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import { Outlet, Link } from "react-router-dom";
+import ScrollToTop from "react-scroll-to-top";
 // import DownloadLink from "react-download-link";
 import Logo from "./Images/logo.png";
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
+// import FormControlLabel from '@mui/material/FormControlLabel';
+// import Switch from '@mui/material/Switch';
 export default class header extends Component {
   render() {
     return (
       <>
+      <ScrollToTop smooth  color="#fff"/>
         <section className="header">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
@@ -46,10 +48,9 @@ export default class header extends Component {
                     <Link
                       className="nav-link active bag-2"
                       aria-current="page"
-                      to="/"
+                      to="#exampleModalToggle"
                       data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                      type="button"
+                      role="button"
                     >
                       Login
                     </Link>
@@ -103,24 +104,29 @@ export default class header extends Component {
                       Affiliate
                     </Link>
                   </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/orderpage">
+                      My Order
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
           </nav>
         </section>
+
         <div
           class="modal fade"
-          id="exampleModal"
+          id="exampleModalToggle"
+          aria-labelledby="exampleModalToggleLabel"
           tabindex="-1"
-          aria-labelledby="exampleModalLabel"
           aria-hidden="true"
+          style={{ display: "none" }}
         >
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
-                  Login
-                </h5>
+                {/* <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5> */}
                 <button
                   type="button"
                   class="btn-close"
@@ -129,40 +135,85 @@ export default class header extends Component {
                 ></button>
               </div>
               <div class="modal-body">
-                <div className="wrap-6">
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-md-12">
-                        <div className="login-page">
-                          <div className="form">
-                            <form className="register-form">
-                              <input type="text" placeholder="name" />
-                              <input type="password" placeholder="password" />
-                              <input type="text" placeholder="email address" />
-                              <button>create</button>
-                              <p className="message">
-                                Already registered? <Link to="/">Sign In</Link>
-                              </p>
-                            </form>
-                            <form className="login-form">
-                              <input type="text" placeholder="username" />
-                              <input type="password" placeholder="password" />
-                              <button>login</button>
-                              <p className="message">
-                                Not registered?{" "}
-                                <Link
-                                  to="/"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#exampleModal"
-                                >
-                                  Create an account
-                                </Link>
-                              </p>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                <div className="login-page">
+                  <div className="form">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Login
+                    </h5>
+
+                    <form className="login-form">
+                      <input type="text" placeholder="username" />
+                      <input type="password" placeholder="password" />
+                      <button>login</button>
+                      <p className="message">
+                        Not registered?{" "}
+                        <Link
+                          to="/"
+                          data-bs-target="#exampleModalToggle2"
+                          data-bs-toggle="modal"
+                        >
+                          Create an account
+                        </Link>
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="exampleModalToggle2"
+          aria-labelledby="exampleModalToggleLabel2"
+          tabindex="-1"
+          style={{ display: "none" }}
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                {/* <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5> */}
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div className="login-page">
+                  <div className="form">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Register
+                    </h5>
+                    <form className="register-form">
+                      <input type="text" placeholder="name" />
+                      <input type="password" placeholder="password" />
+                      <input type="text" placeholder="email address" />
+                      <button>create</button>
+                      <p className="message">
+                        Already registered? <Link to="/">Sign In</Link>
+                      </p>
+                    </form>
+
+                    <form className="login-form">
+                      <input type="text" placeholder="username" />
+                      <input type="email" placeholder="email" />
+                      <input type="number" placeholder="phone number" />
+
+                      <button>Register</button>
+                      <p className="message">
+                        {/* Not registered?{" "} */}
+                        <Link
+                          to="/"
+                          data-bs-target="#exampleModalToggle"
+                          data-bs-toggle="modal"
+                        >
+                          Login
+                        </Link>
+                      </p>
+                    </form>
                   </div>
                 </div>
               </div>

@@ -17,7 +17,7 @@ import Offer from './Components/Offer';
 import Delivery from './Components/Delivery';
 import Deliverystatus from './Components/Deliverystatus';
 import Laptop from './Components/Laptop';
-import Filterpage2 from './Components/Filterpage2';
+import Orderstatus from './Components/Orderstatus';
 import Asidefilter from './Components/Asidefilter';
 import Desktop from './Components/Desktop';
 import Pagecount from './Components/Pagecount';
@@ -25,6 +25,7 @@ import Cartdetails from './Components/Cartdetails';
 // import store from './store';
 // import { Provider } from 'react-redux';
 import ErrorPage from './Components/ErrorPage';
+import Orderpage from './Components/Orderpage';
 
 function App() {
   return (
@@ -43,12 +44,13 @@ function App() {
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/deliverystatus" element={<Deliverystatus />} />
           <Route path="/Laptop" element={<Laptop />} />
-          <Route path="/filterpage2" element={<Filterpage2 />} />
+          <Route path="/Orderstatus" element={<Orderstatus />} />
           <Route path="/asidefilter" element={<Asidefilter />} />
           <Route path="/desktop" element={<Desktop />} />
           <Route path="/pagecount" element={<Pagecount />} />
           <Route path="/cartdetails" element={<Cartdetails />} />
           <Route path="*" element={<ErrorPage />} />
+          <Route path="/orderpage" element={<Orderpage />} />
           {/* <Route store={store} element={<Provider />} /> */}
         </Routes>
       </BrowserRouter>
