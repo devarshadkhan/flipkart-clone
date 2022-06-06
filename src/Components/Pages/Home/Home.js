@@ -7,8 +7,6 @@ import Slide from "../../Slide.js";
 import Offer from "../../Offer.js";
 import Delivery from "../../Delivery.js";
 import Deliverystatus from "../../Deliverystatus.js";
-
-
 // import Payment from '../../payment.js';
 import OwlCarousel from "react-owl-carousel";
 // import Heart from "react-animated-heart";
@@ -73,30 +71,29 @@ export default class Home extends Component {
   //   // this.state.date = new Date(); - wrong way
   //   this.setState({date: new Date()});
   // }
-  state= {
-    responsive:{
-        0: {
-            items: 1,
-        },
-        450: {
-            items: 2,
-        },
-        600: {
-            items: 3,
-        },
-        1000: {
-            items: 6,
-        },
-        2000: {
-            items: 6,
-        },
+  state = {
+    responsive: {
+      0: {
+        items: 1,
+      },
+      450: {
+        items: 2,
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 6,
+      },
+      2000: {
+        items: 6,
+      },
     },
-}
+  };
   render() {
     // const [isClick, setClick] = useState(false);
     return (
       <>
-
         <Header />
         <Subheader />
         <Slide />
@@ -124,9 +121,9 @@ export default class Home extends Component {
                 items={6}
                 dots={false}
                 autoplay={true}
-    autoplayTimeout={2000}
-    responsive={this.state.responsive}
-    autoplayHoverPause
+                autoplayTimeout={2000}
+                responsive={this.state.responsive}
+                autoplayHoverPause
               >
                 <div className="item">
                   <div className="thumb-wrapper ">
@@ -425,9 +422,9 @@ export default class Home extends Component {
                 items={6}
                 dots={false}
                 autoplay={true}
-    autoplayTimeout={2000}
-    responsive={this.state.responsive}
-    autoplayHoverPause
+                autoplayTimeout={2000}
+                responsive={this.state.responsive}
+                autoplayHoverPause
               >
                 <div className="item">
                   <div className="thumb-wrapper">
@@ -720,9 +717,9 @@ export default class Home extends Component {
                 items={6}
                 dots={false}
                 autoplay={true}
-    autoplayTimeout={2000}
-    responsive={this.state.responsive}
-    autoplayHoverPause
+                autoplayTimeout={2000}
+                responsive={this.state.responsive}
+                autoplayHoverPause
               >
                 <div className="item">
                   <div className="thumb-wrapper">
@@ -1015,9 +1012,9 @@ export default class Home extends Component {
                 items={6}
                 dots={false}
                 autoplay={true}
-    autoplayTimeout={2000}
-    responsive={this.state.responsive}
-    autoplayHoverPause
+                autoplayTimeout={2000}
+                responsive={this.state.responsive}
+                autoplayHoverPause
               >
                 <div className="item">
                   <div className="thumb-wrapper">
@@ -1307,9 +1304,9 @@ export default class Home extends Component {
                 items={6}
                 dots={false}
                 autoplay={true}
-    autoplayTimeout={2000}
-    responsive={this.state.responsive}
-    autoplayHoverPause
+                autoplayTimeout={2000}
+                responsive={this.state.responsive}
+                autoplayHoverPause
               >
                 <div className="item">
                   <div className="thumb-wrapper">
@@ -1574,7 +1571,7 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        <Delivery/>
+        <Delivery />
         <div className="wrap-4">
           <div className="container-fluid">
             <div className="row">
@@ -1591,7 +1588,7 @@ export default class Home extends Component {
                   </div>
                 </div>
               </div>
-              
+
               <div className="col-md-4">
                 <Link to="/buynow">
                   <img src={img32} alt="" className="bag-8" />
@@ -1636,9 +1633,9 @@ export default class Home extends Component {
                 items={6}
                 dots={false}
                 autoplay={true}
-    autoplayTimeout={2000}
-    responsive={this.state.responsive}
-    autoplayHoverPause
+                autoplayTimeout={2000}
+                responsive={this.state.responsive}
+                autoplayHoverPause
               >
                 <div className="item">
                   <div className="thumb-wrapper">
@@ -1903,9 +1900,9 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        <Deliverystatus/>
+        <Deliverystatus />
         <Footer />
       </>
     );
-  };
-};
+  }
+}
