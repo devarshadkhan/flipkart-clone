@@ -14,7 +14,7 @@ export default class offer extends Component {
                     Exciting <br /> Deals
                   </h2>
                   <p>Up to 40% Off</p>
-                  <img src={img41} alt="" />
+                  <img src={img41} alt="" className="img-responsive img-fluid"/>
                 </div>
               </div>
             </div>
