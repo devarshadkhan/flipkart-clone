@@ -55,22 +55,7 @@ import img40 from "../../Images/img40.webp";
 require("react-owl-carousel");
 
 export default class Home extends Component {
-  // state = {
-  //   date: new Date()
-  // }
 
-  // componentDidMount() {
-  //   this.timerId = setInterval(() => this.tick(), 1000);
-  // }
-
-  // componentWillUnmount() {
-  //   clearInterval(this.timerId);
-  // }
-
-  // tick() {
-  //   // this.state.date = new Date(); - wrong way
-  //   this.setState({date: new Date()});
-  // }
   state = {
     responsive: {
       0: {

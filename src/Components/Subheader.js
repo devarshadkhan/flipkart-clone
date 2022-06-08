@@ -376,13 +376,15 @@ $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
                   <li className="nav-item">
                   {/* <Link to=""  onClick={handleClick}><i className="fa fa-cart-plus"></i>
                   </Link> */}
-                  <Badge badgeContent={1} color="primary" id="basic-button"
+                 <Link to='/Addtocart'>
+                 <Badge badgeContent={1} color="primary" id="basic-button"
                         aria-controls={open ? 'basic-menu' : undefined}
                         aria-haspopup="true"
                         aria-expanded={open ? 'true' : undefined}
                         onClick={handleClick}>
-                            <i className="fa fa-cart-plus"></i>
+                        <i className="fa fa-cart-plus"></i>
                   </Badge>
+                 </Link>
                   </li>
                 {/* <Menu
                     id="basic-menu"

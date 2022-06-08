@@ -45,7 +45,7 @@ export default class subfooter extends Component {
               <div class="col-xl-4 col-lg-4 mb-50">
                 <div class="footer-widget">
                   <div class="footer-logo">
-                    <Link to="/">
+                    <Link to="">
                       <img src={Logo} class="img-fluid" alt="logo" />
                     </Link>
                   </div>
@@ -61,16 +61,16 @@ export default class subfooter extends Component {
                   </div>
                   <div class="footer-social-icon">
                     <span>Follow us</span>
-                    <Link to="/">
+                    <Link to="">
                       <i class="fab fa-facebook-f facebook-bg"></i>
                     </Link>
-                    <Link to="/">
+                    <Link to="">
                       <i class="fab fa-twitter twitter-bg"></i>
                     </Link>
-                    <Link to="/">
+                    <Link to="">
                       <i class="fab fa-google-plus-g google-bg"></i>
                     </Link>
-                    <Link to="/">
+                    <Link to="">
                     
                       <i class="fab fa-instagram instagram instagram-bg"></i>
                     
@@ -85,43 +85,43 @@ export default class subfooter extends Component {
                   </div>
                   <ul>
                     <li>
-                      {/* <Link to="/">MOBILES</Link> */}
-                      <Link to="/">Mobiles</Link>
+                      {/* <Link to="">MOBILES</Link> */}
+                      <Link to="">Mobiles</Link>
                     </li>
                     <li>
-                      {/* <Link to="/">LARGE APPLIANCES</Link> */}
-                      <Link to="/">Large Appliance</Link>
+                      {/* <Link to="">LARGE APPLIANCES</Link> */}
+                      <Link to="">Large Appliance</Link>
                     </li>
                     <li>
-                      {/* <Link to="/">IPHONE</Link> */}
-                      <Link to="/">Iphone</Link>
+                      {/* <Link to="">IPHONE</Link> */}
+                      <Link to="">Iphone</Link>
                     </li>
                     <li>
-                      {/* <Link to="/">CAMERA</Link> */}
-                      <Link to="/">Camera</Link>
-                    </li>
-                    {/* <li>
-                      <Link to="/">LARGE APPLIANCES</Link>
-                    </li> */}
-                    <li>
-                      {/* <Link to="/">CLOTHING</Link> */}
-                      <Link to="/">Clothing</Link>
-                    </li>
-                    <li>
-                      {/* <Link to="/">FOOTWEAR</Link> */}
-                      <Link to="/">Footwear</Link>
-                    </li>
-                    <li>
-                      {/* <Link to="/">GROCERIES</Link> */}
-                      <Link to="/">Groceries</Link>
+                      {/* <Link to="">CAMERA</Link> */}
+                      <Link to="">Camera</Link>
                     </li>
                     {/* <li>
-                      <Link to="/">Contact us</Link>
-                      <Link to="/">Contact us</Link>
+                      <Link to="">LARGE APPLIANCES</Link>
                     </li> */}
                     <li>
-                      {/* <Link to="/">BEST SELLING ON FLIPKAR</Link> */}
-                      <Link to="/">Best Selling on Flipkart</Link>
+                      {/* <Link to="">CLOTHING</Link> */}
+                      <Link to="">Clothing</Link>
+                    </li>
+                    <li>
+                      {/* <Link to="">FOOTWEAR</Link> */}
+                      <Link to="">Footwear</Link>
+                    </li>
+                    <li>
+                      {/* <Link to="">GROCERIES</Link> */}
+                      <Link to="">Groceries</Link>
+                    </li>
+                    {/* <li>
+                      <Link to="">Contact us</Link>
+                      <Link to="">Contact us</Link>
+                    </li> */}
+                    <li>
+                      {/* <Link to="">BEST SELLING ON FLIPKAR</Link> */}
+                      <Link to="">Best Selling on Flipkart</Link>
                     </li>
                   </ul>
                 </div>
@@ -133,34 +133,34 @@ export default class subfooter extends Component {
                   </div>
                   <ul>
                     <li>
-                      <Link to="/">Home</Link>
+                      <Link to="">Home</Link>
                     </li>
                     <li>
-                      <Link to="/">about</Link>
+                      <Link to="">about</Link>
                     </li>
                     <li>
-                      <Link to="/">services</Link>
+                      <Link to="">services</Link>
                     </li>
                     <li>
-                      <Link to="/">portfolio</Link>
+                      <Link to="">portfolio</Link>
                     </li>
                     {/* <li>
-                      <Link to="/">Contact</Link>
+                      <Link to="">Contact</Link>
                     </li> */}
                     <li>
-                      <Link to="/">About us</Link>
+                      <Link to="">About us</Link>
                     </li>
                     <li>
-                      <Link to="/">Our Services</Link>
+                      <Link to="">Our Services</Link>
                     </li>
                     <li>
-                      <Link to="/">Faq</Link>
+                      <Link to="">Faq</Link>
                     </li>
                     <li>
-                      <Link to="/">Contact us</Link>
+                      <Link to="">Contact us</Link>
                     </li>
                     <li>
-                      <Link to="/">Payments</Link>
+                      <Link to="">Payments</Link>
                     </li>
                   </ul>
                 </div>
@@ -191,7 +191,7 @@ export default class subfooter extends Component {
                 <div class="copyright-text">
                   <p>
                     Copyright &copy; 2022, All Right Reserved{" "}
-                    <Link to="/">Himotech Global Technologies</Link>
+                    <Link to="">Himotech Global Technologies</Link>
                   </p>
                 </div>
               </div>

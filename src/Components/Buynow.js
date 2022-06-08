@@ -84,6 +84,9 @@ export default class Buynow1 extends Component {
           height: opts.picHeight * opts.scale + "px",
         });
 
+
+
+        
         //初始化事件
         $picBD
           .on("mouseenter", function (event) {
@@ -113,7 +116,7 @@ export default class Buynow1 extends Component {
       $.fn.picZoomer.defaults = {
         picHeight: 460,
         scale: 2.5,
-        zoomerPosition: { top: "0", left: "380px" },
+        zoomerPosition: { top: "0", left: "500px" },
 
         zoomWidth: 400,
         zoomHeight: 460,

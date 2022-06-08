@@ -24,6 +24,7 @@
     "react-scripts": "5.0.1",
     "react-scroll-to-top": "^1.0.8",
     "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
     "swiper": "^8.1.4",
     "web-vitals": "^2.1.4"
   },
