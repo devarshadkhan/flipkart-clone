@@ -3,7 +3,7 @@ import Header from "./Header";
 import Subheader from "./Subheader";
 import Subfooter from "./Subfooter";
 import { Link } from "@mui/material";
-import Offer from "./Images/offer.png";
+// import Offer from "./Images/offer.png";
 import payment from "./Images/payment.svg";
 import flipkart from "./Images/flipkart.png";
 import $ from "jquery";
@@ -27,20 +27,21 @@ export default class Addtocart extends Component {
       value = isNaN(value) ? 0 : value;
       // value < 1 ? value = 1 : '';
       value--;
+      
       $(_this).siblings("input#number").val(value);
     }
 
-    let copybtn = document.querySelector(".copybtn");
+    // let copybtn = document.querySelector(".copybtn");
 
-    function copyIt() {
-      let copyInput = document.querySelector("#copyvalue");
+    // function copyIt() {
+    //   let copyInput = document.querySelector("#copyvalue");
 
-      copyInput.select();
+    //   copyInput.select();
 
-      document.execCommand("copy");
+    //   document.execCommand("copy");
 
-      copybtn.textContent = "COPIED";
-    }
+    //   copybtn.textContent = "COPIED";
+    // }
 
     return (
       <>
@@ -207,7 +208,7 @@ export default class Addtocart extends Component {
                             <span>You will save ₹24,649 on this order</span>
                           </div>
                           <Link to="/payments">
-                            <img src={payment} alt="" />
+                            <img src={payment} alt="" className="bag-100"/>
                           </Link>
                         </div>
                       </div>

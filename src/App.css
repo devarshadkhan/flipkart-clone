@@ -23,7 +23,7 @@ nav .bag-1 {
   font-size: 12px;
   height: 37px;
 }
-
+.bag-3{width:100% !important;}
 .header .bag-2 {
   color: #2874f0 !important;
   display: inline-block;
@@ -3215,3 +3215,4 @@ tr{font-size: 12px;}
   left:20px;
   background-color: #dc143c;
  }
+ .bag-100{width:100%}
