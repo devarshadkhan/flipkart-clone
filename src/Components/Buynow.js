@@ -23,6 +23,7 @@ import img51 from "./Images/img51.webp";
 import img52 from "./Images/img52.webp";
 import img53 from "./Images/img53.png";
 import img54 from "./Images/img54.svg";
+import Datafetch from "./Datafetch.js";
 
 export default class Buynow1 extends Component {
   state = {
@@ -45,117 +46,7 @@ export default class Buynow1 extends Component {
     },
   };
   render() {
-    (function ($) {
-      $.fn.picZoomer = function (options) {
-        var opts = $.extend({}, $.fn.picZoomer.defaults, options),
-          $this = this,
-          $picBD = $('<div class="picZoomer-pic-wp"></div>')
-            .css({})
-            .appendTo($this),
-          $pic = $this
-            .children("img")
-            .addClass("picZoomer-pic")
-            .appendTo($picBD),
-          $cursor = $(
-            '<div class="picZoomer-cursor"><i class="f-is picZoomCursor-ico"></i></div>'
-          ).appendTo($picBD),
-          cursorSizeHalf = { w: $cursor.width() / 2, h: $cursor.height() / 2 },
-          $zoomWP = $(
-            '<div class="picZoomer-zoom-wp"><img src="" alt="" class="picZoomer-zoom-pic"></div>'
-          ).appendTo($this),
-          $zoomPic = $zoomWP.find(".picZoomer-zoom-pic"),
-          picBDOffset = { x: $picBD.offset().left, y: $picBD.offset().top };
-
-        opts.zoomWidth = opts.zoomWidth || opts.picWidth;
-        opts.zoomHeight = opts.zoomHeight || opts.picHeight;
-        var zoomWPSizeHalf = { w: opts.zoomWidth / 2, h: opts.zoomHeight / 2 };
-
-        //初始化zoom容器大小
-        $zoomWP.css({
-          width: opts.zoomWidth + "px",
-          height: opts.zoomHeight + "px",
-        });
-        $zoomWP.css(
-          opts.zoomerPosition || { top: 0, left: opts.picWidth + 30 + "px" }
-        );
-        //初始化zoom图片大小
-        $zoomPic.css({
-          width: opts.picWidth * opts.scale + "px",
-          height: opts.picHeight * opts.scale + "px",
-        });
-
-
-
-        
-        //初始化事件
-        $picBD
-          .on("mouseenter", function (event) {
-            $cursor.show();
-            $zoomWP.show();
-            $zoomPic.attr("src", $pic.attr("src"));
-          })
-          .on("mouseleave", function (event) {
-            $cursor.hide();
-            $zoomWP.hide();
-          })
-          .on("mousemove", function (event) {
-            var x = event.pageX - picBDOffset.x,
-              y = event.pageY - picBDOffset.y;
-
-            $cursor.css({
-              left: x - cursorSizeHalf.w + "px",
-              top: y - cursorSizeHalf.h + "px",
-            });
-            $zoomPic.css({
-              left: -(x * opts.scale - zoomWPSizeHalf.w) + "px",
-              top: -(y * opts.scale - zoomWPSizeHalf.h) + "px",
-            });
-          });
-        return $this;
-      };
-      $.fn.picZoomer.defaults = {
-        picHeight: 460,
-        scale: 2.5,
-        zoomerPosition: { top: "0", left: "500px" },
-
-        zoomWidth: 400,
-        zoomHeight: 460,
-      };
-    })(jQuery);
-
-    $(document).ready(function () {
-      $(".picZoomer").picZoomer();
-      $(".piclist li").on("click", function (event) {
-        var $pic = $(this).find("img");
-        $(".picZoomer-pic").attr("src", $pic.attr("src"));
-      });
-
-      $(".decrease_").click(function () {
-        decreaseValue(this);
-      });
-      $(".increase_").click(function () {
-        increaseValue(this);
-      });
-      function increaseValue(_this) {
-        var value = parseInt($(_this).siblings("input#number").val(), 10);
-        value = isNaN(value) ? 0 : value;
-        value++;
-        $(_this).siblings("input#number").val(value);
-      }
-
-      function decreaseValue(_this) {
-        var value = parseInt($(_this).siblings("input#number").val(), 10);
-        value = isNaN(value) ? 0 : value;
-        // value < 1 ? value = 1 : '';
-        value--;
-        $(_this).siblings("input#number").val(value);
-      }
-    });
-
-    $(function () {
-      $('[data-toggle="popover"]').popover();
-      $('[data-toggle="tooltip"]').tooltip();
-    });
+ 
 
     return (
       <>
@@ -177,7 +68,10 @@ export default class Buynow1 extends Component {
          
         </div> */}
 
-        <section id="services" class="services section-bg">
+          {
+            Datafetch.map((element) => {
+              return(
+                <section id="services" class="services section-bg" key={element.id20}>
           <div class="container-fluid">
             <div class="row row-sm">
               <div class="col-md-6 _boxzoom">
@@ -208,19 +102,19 @@ export default class Buynow1 extends Component {
               </div>
               <div class="col-md-6">
                 <div class="_product-detail-content">
-                  <p class="_p-name"> Milton Bottle </p>
+                  <p class="_p-name"> {element.Aname20} </p>
                   <div class="_p-price-box">
                     <div class="p-list">
-                      <span class="price"> Rs. 699 </span>
+                      <span class="price"> {element.BName20} </span>
                       <span>
                         {" "}
-                        M.R.P. : <i class="fa fa-inr"></i> <del> 1399 </del>{" "}
+                        M.R.P. : <i class="fa fa-inr"></i> <del>{element.CName20} </del>{" "}
                       </span>
-                      <p className="bag-41">70% off</p>
+                      <p className="bag-41">{element.DName20}</p>
                     </div>
                     <div class="_p-add-cart">
                       <div class="_p-qty">
-                        <span>Add Quantity</span>
+                        <span>{element.EName20}</span>
                         <div
                           class="value-button decrease_"
                           id="decrease_"
@@ -239,25 +133,19 @@ export default class Buynow1 extends Component {
                       </div>
                     </div>
                     <div class="_p-features">
-                      <span> Available offers</span>
+                      <span>{element.FName20}</span>
                       <ul>
                         <li>
-                          <i class="fa-solid fa-tag"></i>Special PriceGet extra
-                          10% off (price inclusive of discount)
+                          <i class="fa-solid fa-tag"></i>{element.GName20}
                         </li>
                         <li>
-                          <i class="fa-solid fa-tag"></i>Partner OfferSign up
-                          for Flipkart Pay Later and get Flipkart Gift Card
-                          worth ₹100*
+                          <i class="fa-solid fa-tag"></i>{element.HName20}
                         </li>
                         <li>
-                          <i class="fa-solid fa-tag"></i>PPartner OfferEarn 10%
-                          up to 100 Super Coins on every purchase of Select
-                          Men’s Clothing products
+                          <i class="fa-solid fa-tag"></i>{element.Iname20}
                         </li>
                         <li>
-                          <i class="fa-solid fa-tag"></i>Combo OfferBuy 2 items
-                          save 5%;Buy 3 or more save 10%
+                          <i class="fa-solid fa-tag"></i>{element.Jname20}
                         </li>
                       </ul>
                     </div>
@@ -275,7 +163,7 @@ export default class Buynow1 extends Component {
                         <option value="">New Mexico</option>
                       </select>
                       <p className="bag-46">
-                        Delivery by29 May, Sunday |<span>Free₹40</span>
+                        {element.Kname20}<span>Free₹40</span>
                       </p>
                       <div className="bag-48">
                         <h6>Size</h6>
@@ -333,6 +221,9 @@ export default class Buynow1 extends Component {
             </div>
           </div>
         </section>
+              )
+            })
+          }
 
         <section class="sec ">
           <div class="container-fluid">
@@ -454,5 +345,5 @@ export default class Buynow1 extends Component {
         <Subfooter />
       </>
     );
-  }
-}
+  };
+};

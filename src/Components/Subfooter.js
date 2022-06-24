@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import payment from "./Images/payment.svg";
 import { Link } from "react-router-dom";
 import Logo from "./Images/logo.png";
+import Datafetch from './Datafetch'
 // import Payment from '../../payment.js';
 
 export default class subfooter extends Component {
@@ -10,13 +11,17 @@ export default class subfooter extends Component {
       <footer class="footer-section">
         <div class="container-fluid">
           <div class="footer-cta pt-3 pb-3">
-            <div class="row bag-14">
+          {
+            Datafetch.map((element =>{
+              return (
+                <>
+              <div class="row bag-14" key={element.id15}>
               <div class="col-xl-4 col-md-4 mb-30">
                 <div class="single-cta">
                   <i class="fas fa-map-marker-alt"></i>
                   <div class="cta-text">
-                    <h4>Find us</h4>
-                    <span>B-01, 84, Block D, Sector 2, Noida, UP 201301</span>
+                    <h4>{element.sname}</h4>
+                    <span>{element.Address}</span>
                   </div>
                 </div>
               </div>
@@ -24,8 +29,8 @@ export default class subfooter extends Component {
                 <div class="single-cta">
                   <i class="fas fa-phone"></i>
                   <div class="cta-text">
-                    <h4>Call us</h4>
-                    <span>9818xxxxxx</span>
+                    <h4>{element.cname}</h4>
+                    <span>{element.PhoneNum}</span>
                   </div>
                 </div>
               </div>
@@ -33,15 +38,23 @@ export default class subfooter extends Component {
                 <div class="single-cta">
                   <i class="far fa-envelope-open"></i>
                   <div class="cta-text">
-                    <h4>Mail us</h4>
-                    <span>info@himotechglobal.com</span>
+                    <h4>{element.mname}</h4>
+                    <span>{element.email}</span>
                   </div>
                 </div>
               </div>
             </div>
+              </>
+              )
+            }))
+          }
           </div>
           <div class="footer-content pt-5 pb-5">
-            <div class="row bag-14">
+            {
+              Datafetch.map((element => {
+                return (
+                  <>
+                  <div class="row bag-14" key={element.id15}>
               <div class="col-xl-4 col-lg-4 mb-50">
                 <div class="footer-widget">
                   <div class="footer-logo">
@@ -51,12 +64,7 @@ export default class subfooter extends Component {
                   </div>
                   <div class="footer-text">
                     <p>
-                      What's more, with our year-round shopping festivals and
-                      events, our prices are irresistible. We're sure you'll
-                      find yourself picking up more than what you had in mind.
-                      If you are wondering why you should shop from Flipkart
-                      when there are multiple options available to you, well,
-                      the below will answer your question.
+                    {element.content}
                     </p>
                   </div>
                   <div class="footer-social-icon">
@@ -81,39 +89,39 @@ export default class subfooter extends Component {
               <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                 <div class="footer-widget">
                   <div class="footer-widget-heading">
-                    <h3>Product Categories</h3>
+                    <h3>{element.sname1}</h3>
                   </div>
                   <ul>
                     <li>
                       {/* <Link to="">MOBILES</Link> */}
-                      <Link to="">Mobiles</Link>
+                      <Link to="">{element.link1}</Link>
                     </li>
                     <li>
                       {/* <Link to="">LARGE APPLIANCES</Link> */}
-                      <Link to="">Large Appliance</Link>
+                      <Link to="">{element.link2}</Link>
                     </li>
                     <li>
                       {/* <Link to="">IPHONE</Link> */}
-                      <Link to="">Iphone</Link>
+                      <Link to="">{element.link3}</Link>
                     </li>
                     <li>
                       {/* <Link to="">CAMERA</Link> */}
-                      <Link to="">Camera</Link>
+                      <Link to="">{element.link4}</Link>
                     </li>
                     {/* <li>
                       <Link to="">LARGE APPLIANCES</Link>
                     </li> */}
                     <li>
                       {/* <Link to="">CLOTHING</Link> */}
-                      <Link to="">Clothing</Link>
+                      <Link to="">{element.link5}</Link>
                     </li>
                     <li>
                       {/* <Link to="">FOOTWEAR</Link> */}
-                      <Link to="">Footwear</Link>
+                      <Link to="">{element.link6}</Link>
                     </li>
                     <li>
                       {/* <Link to="">GROCERIES</Link> */}
-                      <Link to="">Groceries</Link>
+                      <Link to="">{element.link7}</Link>
                     </li>
                     {/* <li>
                       <Link to="">Contact us</Link>
@@ -121,7 +129,7 @@ export default class subfooter extends Component {
                     </li> */}
                     <li>
                       {/* <Link to="">BEST SELLING ON FLIPKAR</Link> */}
-                      <Link to="">Best Selling on Flipkart</Link>
+                      <Link to="">{element.link8}</Link>
                     </li>
                   </ul>
                 </div>
@@ -129,43 +137,43 @@ export default class subfooter extends Component {
               <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                 <div class="footer-widget">
                   <div class="footer-widget-heading">
-                    <h3>Useful Links</h3>
+                    <h3>{element.sname2}</h3>
                   </div>
                   <ul>
                     <li>
-                      <Link to="">Home</Link>
+                      <Link to="">{element.link9}</Link>
                     </li>
                     <li>
-                      <Link to="">about</Link>
+                      <Link to="">{element.link10}</Link>
                     </li>
                     <li>
-                      <Link to="">services</Link>
+                      <Link to="">{element.link11}</Link>
                     </li>
                     <li>
-                      <Link to="">portfolio</Link>
+                      <Link to="">{element.link12}</Link>
                     </li>
                     {/* <li>
                       <Link to="">Contact</Link>
                     </li> */}
                     <li>
-                      <Link to="">About us</Link>
+                      <Link to="">{element.link13}</Link>
                     </li>
                     <li>
-                      <Link to="">Our Services</Link>
+                      <Link to="">{element.link14}</Link>
                     </li>
                     <li>
-                      <Link to="">Faq</Link>
+                      <Link to="">{element.link15}</Link>
                     </li>
                     <li>
-                      <Link to="">Contact us</Link>
+                      <Link to="">{element.link16}</Link>
                     </li>
                     <li>
-                      <Link to="">Payments</Link>
+                      <Link to="">{element.link17}</Link>
                     </li>
                   </ul>
                 </div>
               </div>
-              {/* <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+              {/* <div class="col-xl-4 col-lg-6 col-md-6 mb-50">
                         <div class="footer-widget">
                             <div class="footer-widget-heading">
                                 <h3>Subscribe</h3>
@@ -182,6 +190,10 @@ export default class subfooter extends Component {
                         </div>
                     </div> */}
             </div>
+                  </>
+                )
+              }))
+            }
           </div>
         </div>
         <div class="copyright-area">

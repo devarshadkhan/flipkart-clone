@@ -4,8 +4,7 @@ import Header from "./Header";
 import Subheader from "./Subheader";
 import Subfooter from "./Subfooter";
 import Asidefilter from "./Asidefilter";
-// import Img46 from "./Components/Images/img46.webp"
-import Img46 from "./Images/img46.webp";
+import Datafetch from "./Datafetch";
 import Pagecount from "./Pagecount";
 export default class Desktop extends Component {
   render() {
@@ -78,17 +77,24 @@ export default class Desktop extends Component {
                       </div>
                     </div>
                   </div>
+
+
+                  {/* Product has started */}
                   <div class="card-body">
                     <div class="row bag-14">
+                    {
+                      Datafetch.map((element => {
+                          return (
+                            <>
                       <div class="col-md-4 mb-4">
-                        <div class="card">
-                          <img class="card-img-top" src={Img46} alt="" />
+                            <div class="card" key={element.id13}>
+                          <img class="card-img-top" src={element.image13} alt="" />
                           <div class="card-body">
                             <p class="h6">
                               <small class="text-muted">
-                                Dell PC Set <br />
+                                {element.productname13}<br />
                               </small>
-                              3 Core 11th Gen 8GB/256GB
+                             {element.decs13}
                             </p>
                             <p class="m-0">
                               <div className="star-rating">
@@ -111,434 +117,28 @@ export default class Desktop extends Component {
                                 </ul>
                               </div>
                             </p>
-                            <p class="h5 m-0">$782.00</p>
+                            <p class="h5 m-0">{element.price13}</p>
                           </div>
                           <div class="card-footer">
                             <div class="btn-group" role="group">
                               <Link
                                 className="custom-btn btn-3 bag-26"
-                                to=""
-                              >
-                                <span>Add to cart</span>
+                                to="">
+                                <span>{element.button}</span>
                               </Link>
                               <Link
                                 className="custom-btn btn-3 bag-26"
-                                to="/buynow"
-                              >
-                                <span>BUY NOW</span>
+                                to="/buynow">
+                                <span>{element.buybtn}</span>
                               </Link>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-md-4 mb-4">
-                        <div class="card">
-                          <img class="card-img-top" src={Img46} alt="" />
-                          <div class="card-body">
-                            <p class="h6">
-                              <small class="text-muted">
-                                Dell PC Set <br />
-                              </small>
-                              3 Core 11th Gen 8GB/256GB
-                            </p>
-                            <p class="m-0">
-                              <div className="star-rating">
-                                <ul className="list-inline">
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star-o"></i>
-                                  </li>
-                                </ul>
-                              </div>
-                            </p>
-                            <p class="h5 m-0">$782.00</p>
-                          </div>
-                          <div class="card-footer">
-                            <div class="btn-group" role="group">
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to=""
-                              >
-                                <span>Add to cart</span>
-                              </Link>
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to="/buynow"
-                              >
-                                <span>BUY NOW</span>
-                              </Link>
-                            </div>
-                          </div>
                         </div>
-                      </div>
-                      <div class="col-md-4 mb-4">
-                        <div class="card">
-                          <img class="card-img-top" src={Img46} alt="" />
-                          <div class="card-body">
-                            <p class="h6">
-                              <small class="text-muted">
-                                Dell PC Set <br />
-                              </small>
-                              3 Core 11th Gen 8GB/256GB
-                            </p>
-                            <p class="m-0">
-                              <div className="star-rating">
-                                <ul className="list-inline">
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star-o"></i>
-                                  </li>
-                                </ul>
-                              </div>
-                            </p>
-                            <p class="h5 m-0">$782.00</p>
-                          </div>
-                          <div class="card-footer">
-                            <div class="btn-group" role="group">
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to=""
-                              >
-                                <span>Add to cart</span>
-                              </Link>
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to="/buynow"
-                              >
-                                <span>BUY NOW</span>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-4">
-                        <div class="card">
-                          <img class="card-img-top" src={Img46} alt="" />
-                          <div class="card-body">
-                            <p class="h6">
-                              <small class="text-muted">
-                                Dell PC Set <br />
-                              </small>
-                              3 Core 11th Gen 8GB/256GB
-                            </p>
-                            <p class="m-0">
-                              <div className="star-rating">
-                                <ul className="list-inline">
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star-o"></i>
-                                  </li>
-                                </ul>
-                              </div>
-                            </p>
-                            <p class="h5 m-0">$782.00</p>
-                          </div>
-                          <div class="card-footer">
-                            <div class="btn-group" role="group">
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to=""
-                              >
-                                <span>Add to cart</span>
-                              </Link>
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to="/buynow"
-                              >
-                                <span>BUY NOW</span>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-4">
-                        <div class="card">
-                          <img class="card-img-top" src={Img46} alt="" />
-                          <div class="card-body">
-                            <p class="h6">
-                              <small class="text-muted">
-                                Dell PC Set <br />
-                              </small>
-                              3 Core 11th Gen 8GB/256GB
-                            </p>
-                            <p class="m-0">
-                              <div className="star-rating">
-                                <ul className="list-inline">
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star-o"></i>
-                                  </li>
-                                </ul>
-                              </div>
-                            </p>
-                            <p class="h5 m-0">$782.00</p>
-                          </div>
-                          <div class="card-footer">
-                            <div class="btn-group" role="group">
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to=""
-                              >
-                                <span>Add to cart</span>
-                              </Link>
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to="/buynow"
-                              >
-                                <span>BUY NOW</span>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-4">
-                        <div class="card">
-                          <img class="card-img-top" src={Img46} alt="" />
-                          <div class="card-body">
-                            <p class="h6">
-                              <small class="text-muted">
-                                Dell PC Set <br />
-                              </small>
-                              3 Core 11th Gen 8GB/256GB
-                            </p>
-                            <p class="m-0">
-                              <div className="star-rating">
-                                <ul className="list-inline">
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star-o"></i>
-                                  </li>
-                                </ul>
-                              </div>
-                            </p>
-                            <p class="h5 m-0">$782.00</p>
-                          </div>
-                          <div class="card-footer">
-                            <div class="btn-group" role="group">
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to=""
-                              >
-                                <span>Add to cart</span>
-                              </Link>
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to="/buynow"
-                              >
-                                <span>BUY NOW</span>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-4">
-                        <div class="card">
-                          <img class="card-img-top" src={Img46} alt="" />
-                          <div class="card-body">
-                            <p class="h6">
-                              <small class="text-muted">
-                                Dell PC Set <br />
-                              </small>
-                              3 Core 11th Gen 8GB/256GB
-                            </p>
-                            <p class="m-0">
-                              <div className="star-rating">
-                                <ul className="list-inline">
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star-o"></i>
-                                  </li>
-                                </ul>
-                              </div>
-                            </p>
-                            <p class="h5 m-0">$782.00</p>
-                          </div>
-                          <div class="card-footer">
-                            <div class="btn-group" role="group">
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to=""
-                              >
-                                <span>Add to cart</span>
-                              </Link>
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to="/buynow"
-                              >
-                                <span>BUY NOW</span>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-4">
-                        <div class="card">
-                          <img class="card-img-top" src={Img46} alt="" />
-                          <div class="card-body">
-                            <p class="h6">
-                              <small class="text-muted">
-                                Dell PC Set <br />
-                              </small>
-                              3 Core 11th Gen 8GB/256GB
-                            </p>
-                            <p class="m-0">
-                              <div className="star-rating">
-                                <ul className="list-inline">
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star-o"></i>
-                                  </li>
-                                </ul>
-                              </div>
-                            </p>
-                            <p class="h5 m-0">$782.00</p>
-                          </div>
-                          <div class="card-footer">
-                            <div class="btn-group" role="group">
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to=""
-                              >
-                                <span>Add to cart</span>
-                              </Link>
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to="/buynow"
-                              >
-                                <span>BUY NOW</span>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-4">
-                        <div class="card">
-                          <img class="card-img-top" src={Img46} alt="" />
-                          <div class="card-body">
-                            <p class="h6">
-                              <small class="text-muted">
-                                Dell PC Set <br />
-                              </small>
-                              3 Core 11th Gen 8GB/256GB
-                            </p>
-                            <p class="m-0">
-                              <div className="star-rating">
-                                <ul className="list-inline">
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star"></i>
-                                  </li>
-                                  <li className="list-inline-item">
-                                    <i className="fa fa-star-o"></i>
-                                  </li>
-                                </ul>
-                              </div>
-                            </p>
-                            <p class="h5 m-0">$782.00</p>
-                          </div>
-                          <div class="card-footer">
-                            <div class="btn-group" role="group">
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to=""
-                              >
-                                <span>Add to cart</span>
-                              </Link>
-                              <Link
-                                className="custom-btn btn-3 bag-26"
-                                to="/buynow"
-                              >
-                                <span>BUY NOW</span>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                            </>
+                          )
+                        }))
+                       }
                     </div>
                     <Pagecount/>
                   </div>

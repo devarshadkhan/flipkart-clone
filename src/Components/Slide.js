@@ -10,9 +10,6 @@ import background2 from "./Images/bg3.png";
 import background3 from "./Images/bg4.png";
 import background4 from "./Images/bg6.jpeg";
 
-// import background5 from "./Images/bg8.webp"
-
-// import required modules
 import { Navigation } from "swiper";
 export default class slide extends Component {
   render() {
@@ -27,26 +24,21 @@ export default class slide extends Component {
                   modules={[Navigation]}
                   className="mySwiper"
                   breakpoints={{
-                        576: {
-                          width: 576,
-                          slidesPerView: 1,
-                        },
-                        768: {
-                          width: 768,
-                          slidesPerView: 1,
-                        },
-                        1200: {
-                          width: 1332,
-                          slidesPerView: 1,
-                        },
-                      }}
-
-      spaceBetween={0}
-      slidesPerView={1}
-      // pagination={{ clickable: true }}
-      // scrollbar={{ draggable: true }}
-      // onSwiper={(swiper) => console.log(swiper)}
-      // onSlideChange={() => console.log("slide change")}
+                    576: {
+                      width: 576,
+                      slidesPerView: 1,
+                    },
+                    768: {
+                      width: 768,
+                      slidesPerView: 1,
+                    },
+                    1200: {
+                      width: 1320,
+                      slidesPerView: 1,
+                    },
+                  }}
+                  spaceBetween={0}
+                  slidesPerView={1}
                 >
                   <SwiperSlide
                     style={{ backgroundImage: `url(${background})` }}
@@ -68,7 +60,6 @@ export default class slide extends Component {
                     style={{ backgroundImage: `url(${background4})` }}
                     className="bag-3"
                   ></SwiperSlide>
-                  {/* <SwiperSlide style={{ backgroundImage: `url(${background5})`}} className="bag-3"></SwiperSlide> */}
                 </Swiper>
               </div>
             </div>
@@ -76,5 +67,5 @@ export default class slide extends Component {
         </div>
       </>
     );
-  }
-}
+  };
+};

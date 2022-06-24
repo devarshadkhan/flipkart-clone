@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import Subheader from "./Subheader";
 import Subfooter from "./Subfooter";
 import Pagecount from "./Pagecount";
-import Img55 from './Images/img55.svg'
+import Img55 from "./Images/img55.svg";
+import Datafetch from "./Datafetch";
 // import $ from "jquery"
 export default class Filterpage2 extends Component {
   render() {
@@ -41,7 +41,6 @@ export default class Filterpage2 extends Component {
                                   <input type="checkbox" />
                                   <p>Delivered</p>
                                 </div>
-
                                 <div className="bag-65">
                                   <input type="checkbox" />
                                   <p>Cancelled</p>
@@ -117,7 +116,11 @@ export default class Filterpage2 extends Component {
                   placeholder="Search your order here"
                   aria-label="Search"
                 />
-                <Link className="custom-btn btn-3 bag-32 bag-66" to="/" type="submit">
+                <Link
+                  className="custom-btn btn-3 bag-32 bag-66"
+                  to=""
+                  type="submit"
+                >
                   <span>
                     <i className="fa fa-search"></i>
                   </span>
@@ -126,285 +129,38 @@ export default class Filterpage2 extends Component {
 
               <Link to="/orderstatus">
                 <div className="bag-63">
-                  <div className="row bag-63">
-                    <div className="col-md-2">
-                      <img
-                        src={
-                          "https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750722/Ecommerce/acer-v-17-nitro-realsense.jpg"
-                        }
-                        alt=""
-                        className="bag-64"
-                      />
-                    </div>
-                    <div className="col-md-5">
-                      <h6>Lenove Laptop</h6> <br />
-                      <div className="parad">
-                        <p>Color:Blue</p>
-                        <p>Seller:Himotech</p>
+                  {Datafetch.map((element) => {
+                    return (
+                      <div className="row bag-63" key={element.id16}>
+                        <div className="col-md-2">
+                          <img
+                            src={element.image16}
+                            alt=""
+                            className="bag-64"/>
+                        </div>
+                        <div className="col-md-5">
+                          <h6>{element.pname1}</h6> <br />
+                          <div className="parad">
+                            <p>{element.cname1}</p>
+                            <p>{element.sname5}</p>
+                          </div>
+                        </div>
+                        <div className="col-md-1">
+                          <p className="bag-81"> &#x20B9; {element.rprice}</p>
+                        </div>
+                        <div className="col-md-4">
+                          <ul className="bag-80">
+                            <li className="bag-75">{element.dcont}</li>
+                            <span>{element.dcont}</span>
+                          </ul>
+                          <img src={Img55} alt="" className="bag-79" />
+                          <p className="bag-78">{element.rating}</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-md-1">
-                      <p className="bag-81">₹455</p>
-                    </div>
-                    <div className="col-md-4">
-                      <ul className="bag-80">
-                        <li className="bag-75">Delivered on Jun 05, 2021</li>
-                        <span>
-                        Your item has been delivered
-                        </span>
-                      </ul>
-                      <img src={Img55} alt="" className="bag-79"/>
-                      <p className="bag-78">Rate & Review Product</p>
-                    </div>
-                  </div>
+                    );
+                  })}
                 </div>
               </Link>
-              <Link to="/orderstatus">
-                <div className="bag-63">
-                  <div className="row bag-63">
-                    <div className="col-md-2">
-                      <img
-                        src={
-                          "https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750722/Ecommerce/acer-v-17-nitro-realsense.jpg"
-                        }
-                        alt=""
-                        className="bag-64"
-                      />
-                    </div>
-                    <div className="col-md-5">
-                      <h6>Lenove Laptop</h6> <br />
-                      <div className="parad">
-                        <p>Color:Blue</p>
-                        <p>Seller:Himotech</p>
-                      </div>
-                    </div>
-                    <div className="col-md-1">
-                      <p className="bag-81">₹455</p>
-                    </div>
-                    <div className="col-md-4">
-                      <ul className="bag-80">
-                        <li className="bag-75">Delivered on Jun 05, 2021</li>
-                        <span>
-                        Your item has been delivered
-                        </span>
-                      </ul>
-                      <img src={Img55} alt="" className="bag-79"/>
-                      <p className="bag-78">Rate & Review Product</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-              <Link to="/orderstatus">
-                <div className="bag-63">
-                  <div className="row bag-63">
-                    <div className="col-md-2">
-                      <img
-                        src={
-                          "https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750722/Ecommerce/acer-v-17-nitro-realsense.jpg"
-                        }
-                        alt=""
-                        className="bag-64"
-                      />
-                    </div>
-                    <div className="col-md-5">
-                      <h6>Lenove Laptop</h6> <br />
-                      <div className="parad">
-                        <p>Color:Blue</p>
-                        <p>Seller:Himotech</p>
-                      </div>
-                    </div>
-                    <div className="col-md-1">
-                      <p className="bag-81">₹455</p>
-                    </div>
-                    <div className="col-md-4">
-                      <ul className="bag-80">
-                        <li className="bag-75">Delivered on Jun 05, 2021</li>
-                        <span>
-                        Your item has been delivered
-                        </span>
-                      </ul>
-                      <img src={Img55} alt="" className="bag-79"/>
-                      <p className="bag-78">Rate & Review Product</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-              <Link to="/orderstatus">
-                <div className="bag-63">
-                  <div className="row bag-63">
-                    <div className="col-md-2">
-                      <img
-                        src={
-                          "https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750722/Ecommerce/acer-v-17-nitro-realsense.jpg"
-                        }
-                        alt=""
-                        className="bag-64"
-                      />
-                    </div>
-                    <div className="col-md-5">
-                      <h6>Lenove Laptop</h6> <br />
-                      <div className="parad">
-                        <p>Color:Blue</p>
-                        <p>Seller:Himotech</p>
-                      </div>
-                    </div>
-                    <div className="col-md-1">
-                      <p className="bag-81">₹455</p>
-                    </div>
-                    <div className="col-md-4">
-                      <ul className="bag-80">
-                        <li className="bag-75">Delivered on Jun 05, 2021</li>
-                        <span>
-                        Your item has been delivered
-                        </span>
-                      </ul>
-                      <img src={Img55} alt="" className="bag-79"/>
-                      <p className="bag-78">Rate & Review Product</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-              <Link to="/orderstatus">
-                <div className="bag-63">
-                  <div className="row bag-63">
-                    <div className="col-md-2">
-                      <img
-                        src={
-                          "https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750722/Ecommerce/acer-v-17-nitro-realsense.jpg"
-                        }
-                        alt=""
-                        className="bag-64"
-                      />
-                    </div>
-                    <div className="col-md-5">
-                      <h6>Lenove Laptop</h6> <br />
-                      <div className="parad">
-                        <p>Color:Blue</p>
-                        <p>Seller:Himotech</p>
-                      </div>
-                    </div>
-                    <div className="col-md-1">
-                      <p className="bag-81">₹455</p>
-                    </div>
-                    <div className="col-md-4">
-                      <ul className="bag-80">
-                        <li className="bag-75">Delivered on Jun 05, 2021</li>
-                        <span>
-                        Your item has been delivered
-                        </span>
-                      </ul>
-                      <img src={Img55} alt="" className="bag-79"/>
-                      <p className="bag-78">Rate & Review Product</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-              <Link to="/orderstatus">
-                <div className="bag-63">
-                  <div className="row bag-63">
-                    <div className="col-md-2">
-                      <img
-                        src={
-                          "https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750722/Ecommerce/acer-v-17-nitro-realsense.jpg"
-                        }
-                        alt=""
-                        className="bag-64"
-                      />
-                    </div>
-                    <div className="col-md-5">
-                      <h6>Lenove Laptop</h6> <br />
-                      <div className="parad">
-                        <p>Color:Blue</p>
-                        <p>Seller:Himotech</p>
-                      </div>
-                    </div>
-                    <div className="col-md-1">
-                      <p className="bag-81">₹455</p>
-                    </div>
-                    <div className="col-md-4">
-                      <ul className="bag-80">
-                        <li className="bag-75">Delivered on Jun 05, 2021</li>
-                        <span>
-                        Your item has been delivered
-                        </span>
-                      </ul>
-                      <img src={Img55} alt="" className="bag-79"/>
-                      <p className="bag-78">Rate & Review Product</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-              <Link to="/orderstatus">
-                <div className="bag-63">
-                  <div className="row bag-63">
-                    <div className="col-md-2">
-                      <img
-                        src={
-                          "https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750722/Ecommerce/acer-v-17-nitro-realsense.jpg"
-                        }
-                        alt=""
-                        className="bag-64"
-                      />
-                    </div>
-                    <div className="col-md-5">
-                      <h6>Lenove Laptop</h6> <br />
-                      <div className="parad">
-                        <p>Color:Blue</p>
-                        <p>Seller:Himotech</p>
-                      </div>
-                    </div>
-                    <div className="col-md-1">
-                      <p className="bag-81">₹455</p>
-                    </div>
-                    <div className="col-md-4">
-                      <ul className="bag-80">
-                        <li className="bag-75">Delivered on Jun 05, 2021</li>
-                        <span>
-                        Your item has been delivered
-                        </span>
-                      </ul>
-                      <img src={Img55} alt="" className="bag-79"/>
-                      <p className="bag-78">Rate & Review Product</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-              <Link to="/orderstatus">
-                <div className="bag-63">
-                  <div className="row bag-63">
-                    <div className="col-md-2">
-                      <img
-                        src={
-                          "https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750722/Ecommerce/acer-v-17-nitro-realsense.jpg"
-                        }
-                        alt=""
-                        className="bag-64"
-                      />
-                    </div>
-                    <div className="col-md-5">
-                      <h6>Lenove Laptop</h6> <br />
-                      <div className="parad">
-                        <p>Color:Blue</p>
-                        <p>Seller:Himotech</p>
-                      </div>
-                    </div>
-                    <div className="col-md-1">
-                      <p className="bag-81">₹455</p>
-                    </div>
-                    <div className="col-md-4">
-                      <ul className="bag-80">
-                        <li className="bag-75">Delivered on Jun 05, 2021</li>
-                        <span>
-                        Your item has been delivered
-                        </span>
-                      </ul>
-                      <img src={Img55} alt="" className="bag-79"/>
-                      <p className="bag-78">Rate & Review Product</p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-             
               <Pagecount />
             </div>
           </div>
@@ -412,5 +168,5 @@ export default class Filterpage2 extends Component {
         <Subfooter />
       </>
     );
-  }
-}
+  };
+};

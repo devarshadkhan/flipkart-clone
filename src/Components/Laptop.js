@@ -1,30 +1,13 @@
-import React, {useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import Subheader from "./Subheader";
 import Subfooter from "./Subfooter";
-import Pagecount from './Pagecount';
+import Pagecount from "./Pagecount";
 import Asidefilter from "./Asidefilter";
-// import Img14 from "./Images/img14.webp";
-import { useDispatch } from "react-redux";
-import Cardsdata from "./Cardsdata";
-import { ADD } from '../redux/Actions/Action';
+import Datafetch from "./Datafetch";
 
 const Laptop = () => {
-
-  const [data,setData] = useState(Cardsdata);
-  // console.log(data);
-
-
-// const dispatch = useDispatch();
-
-
-  const send = (e)=>{
-    console.log(e);
-    // dispatch(ADD(e));
-  }
-
-
   return (
     <>
       <Header />
@@ -49,7 +32,6 @@ const Laptop = () => {
                           <i class="fas fa-th-list"></i>
                         </button>
 
-                        
                         <button type="button" class="btn btn-secondary bag-25">
                           <i class="fas fa-sync-alt"></i>
                           <span>cart (0)</span>
@@ -92,312 +74,80 @@ const Laptop = () => {
                   </div>
                 </div>
 
+                <div className="row">
                 {
-          data.map((element, id) => {
-            return (
-              <>
-               <div className="row">
-               <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <img class="card-img-top" src={element.imgdata} alt="" />
-                    <div class="card-body">
-                      <p class="h6">
-                        {/* <small class="text-muted">
-                       
+                  Datafetch.map((element => {
+                    return (
+                      <>
+                      <div class="col-md-4 mb-4" key={element.id14}>
+                    <div class="card">
+                      <img
+                        class="card-img-top"
+                        src={element.image14}
+                        alt=""
+                      />
+                      <div class="card-body">
+                        <p class="h6">
+                          <small class="text-muted">
+                          {element.productname14}
                          <br />
-                        </small> */}
-                        {element.rname}
-                        
-                      </p>
-                      <p class="m-0">
-                        <div className="star-rating">
-                          <ul className="list-inline">
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star-o"></i>
-                            </li>
-                          </ul>
+                        </small>
+                         {element.decs14}
+                        </p>
+                        <p class="m-0">
+                          <div className="star-rating">
+                            <ul className="list-inline">
+                              <li className="list-inline-item">
+                                <i className="fa fa-star"></i>
+                              </li>
+                              <li className="list-inline-item">
+                                <i className="fa fa-star"></i>
+                              </li>
+                              <li className="list-inline-item">
+                                <i className="fa fa-star"></i>
+                              </li>
+                              <li className="list-inline-item">
+                                <i className="fa fa-star"></i>
+                              </li>
+                              <li className="list-inline-item">
+                                <i className="fa fa-star-o"></i>
+                              </li>
+                            </ul>
+                          </div>
+                        </p>
+                        <p class="h5 m-0">{element.price14}</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="btn-group" role="group">
+                          <Link
+                            className="custom-btn btn-3 bag-26"
+                            to=""
+                            type="button"
+                          >
+                            <span>{element.button}</span>
+                          </Link>
+                          <Link
+                            className="custom-btn btn-3 bag-26"
+                            to="/buynow"
+                          >
+                            <span>{element.buybtn}</span>
+                          </Link>
                         </div>
-                      </p>
-                      <p class="h5 m-0">$782.00</p>
-                    </div>
-                    <div class="card-footer">
-                      <div class="btn-group" role="group">
-                        <Link className="custom-btn btn-3 bag-26" to="" type="button" 
-                        onClick={()=> send(element)}>
-                          <span>Add to cart</span>
-                        </Link>
-                        <Link className="custom-btn btn-3 bag-26" to="/buynow">
-                          <span>BUY NOW</span>
-                        </Link>
                       </div>
                     </div>
                   </div>
-                </div>
-               <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <img class="card-img-top" src={element.imgdata} alt="" />
-                    <div class="card-body">
-                      <p class="h6">
-                        {/* <small class="text-muted">
-                       
-                         <br />
-                        </small> */}
-                        {element.rname}
-                        
-                      </p>
-                      <p class="m-0">
-                        <div className="star-rating">
-                          <ul className="list-inline">
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star-o"></i>
-                            </li>
-                          </ul>
-                        </div>
-                      </p>
-                      <p class="h5 m-0">$782.00</p>
-                    </div>
-                    <div class="card-footer">
-                      <div class="btn-group" role="group">
-                        <Link className="custom-btn btn-3 bag-26" to="" type="button" 
-                        onClick={()=> send(element)}>
-                          <span>Add to cart</span>
-                        </Link>
-                        <Link className="custom-btn btn-3 bag-26" to="/buynow">
-                          <span>BUY NOW</span>
-                        </Link>
+                      </>
+                    )
+                  }))
+                }
                       </div>
                     </div>
                   </div>
+                  <Pagecount />
                 </div>
-               <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <img class="card-img-top" src={element.imgdata} alt="" />
-                    <div class="card-body">
-                      <p class="h6">
-                        {/* <small class="text-muted">
-                       
-                         <br />
-                        </small> */}
-                        {element.rname}
-                        
-                      </p>
-                      <p class="m-0">
-                        <div className="star-rating">
-                          <ul className="list-inline">
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star-o"></i>
-                            </li>
-                          </ul>
-                        </div>
-                      </p>
-                      <p class="h5 m-0">$782.00</p>
-                    </div>
-                    <div class="card-footer">
-                      <div class="btn-group" role="group">
-                        <Link className="custom-btn btn-3 bag-26" to="" type="button" 
-                        onClick={()=> send(element)}>
-                          <span>Add to cart</span>
-                        </Link>
-                        <Link className="custom-btn btn-3 bag-26" to="/buynow">
-                          <span>BUY NOW</span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-               <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <img class="card-img-top" src={element.imgdata} alt="" />
-                    <div class="card-body">
-                      <p class="h6">
-                        {/* <small class="text-muted">
-                       
-                         <br />
-                        </small> */}
-                        {element.rname}
-                        
-                      </p>
-                      <p class="m-0">
-                        <div className="star-rating">
-                          <ul className="list-inline">
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star-o"></i>
-                            </li>
-                          </ul>
-                        </div>
-                      </p>
-                      <p class="h5 m-0">$782.00</p>
-                    </div>
-                    <div class="card-footer">
-                      <div class="btn-group" role="group">
-                        <Link className="custom-btn btn-3 bag-26" to="" type="button" 
-                        onClick={()=> send(element)}>
-                          <span>Add to cart</span>
-                        </Link>
-                        <Link className="custom-btn btn-3 bag-26" to="/buynow">
-                          <span>BUY NOW</span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-               <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <img class="card-img-top" src={element.imgdata} alt="" />
-                    <div class="card-body">
-                      <p class="h6">
-                        {/* <small class="text-muted">
-                       
-                         <br />
-                        </small> */}
-                        {element.rname}
-                        
-                      </p>
-                      <p class="m-0">
-                        <div className="star-rating">
-                          <ul className="list-inline">
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star-o"></i>
-                            </li>
-                          </ul>
-                        </div>
-                      </p>
-                      <p class="h5 m-0">$782.00</p>
-                    </div>
-                    <div class="card-footer">
-                      <div class="btn-group" role="group">
-                        <Link className="custom-btn btn-3 bag-26" to="" type="button" 
-                        onClick={()=> send(element)}>
-                          <span>Add to cart</span>
-                        </Link>
-                        <Link className="custom-btn btn-3 bag-26" to="/buynow">
-                          <span>BUY NOW</span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-               <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <img class="card-img-top" src={element.imgdata} alt="" />
-                    <div class="card-body">
-                      <p class="h6">
-                        {/* <small class="text-muted">
-                       
-                         <br />
-                        </small> */}
-                        {element.rname}
-                        
-                      </p>
-                      <p class="m-0">
-                        <div className="star-rating">
-                          <ul className="list-inline">
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star"></i>
-                            </li>
-                            <li className="list-inline-item">
-                              <i className="fa fa-star-o"></i>
-                            </li>
-                          </ul>
-                        </div>
-                      </p>
-                      <p class="h5 m-0">$782.00</p>
-                    </div>
-                    <div class="card-footer">
-                      <div class="btn-group" role="group">
-                        <Link className="custom-btn btn-3 bag-26" to="" type="button" 
-                        onClick={()=> send(element)}>
-                          <span>Add to cart</span>
-                        </Link>
-                        <Link className="custom-btn btn-3 bag-26" to="/buynow">
-                          <span>BUY NOW</span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <Pagecount/>
-               </div>
-                </>
-
-                )
-          })
-        }
               </div>
-            </div>
-          </div>
-        </div>
       </section>
-     
+
       <Subfooter />
     </>
   );

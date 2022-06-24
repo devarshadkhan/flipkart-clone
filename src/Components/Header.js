@@ -9,7 +9,7 @@ export default class header extends Component {
   render() {
     return (
       <>
-      <ScrollToTop smooth  color="#fff"/>
+        <ScrollToTop smooth color="#fff" />
         <section className="header">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
@@ -18,9 +18,17 @@ export default class header extends Component {
                   <img src={Logo} alt="" className="bag-1" />
                 </Link>
               </div>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
 
               <form className="d-flex">
                 <input
@@ -69,13 +77,13 @@ export default class header extends Component {
                     >
                       <li>
                         <Link className="dropdown-item" to="/">
-                          Notification Preferences{" "}
+                          Notification Preferences
                           <i className="fa fa-bell"></i>
                         </Link>
                       </li>
                       <li>
                         <Link className="dropdown-item" to="/">
-                          24*7 Customer Care{" "}
+                          24*7 Customer Care
                           <i className="fa fa-phone-square"></i>
                         </Link>
                       </li>
@@ -134,11 +142,11 @@ export default class header extends Component {
                     </h5>
 
                     <form className="login-form">
-                      <input type="text" placeholder="username" />
-                      <input type="password" placeholder="password" />
+                      <input type="text" placeholder="username" required />
+                      <input type="password" placeholder="password" required />
                       <button>login</button>
                       <p className="message">
-                        Not registered?{" "}
+                        Not registered?
                         <Link
                           to="/"
                           data-bs-target="#exampleModalToggle2"
@@ -180,9 +188,9 @@ export default class header extends Component {
                       Register
                     </h5>
                     <form className="register-form">
-                      <input type="text" placeholder="name" />
-                      <input type="password" placeholder="password" />
-                      <input type="text" placeholder="email address" />
+                      <input type="text" placeholder="name" required />
+                      <input type="password" placeholder="password" required />
+                      <input type="text" placeholder="email address" required />
                       <button>create</button>
                       <p className="message">
                         Already registered? <Link to="/">Sign In</Link>
@@ -190,9 +198,13 @@ export default class header extends Component {
                     </form>
 
                     <form className="login-form">
-                      <input type="text" placeholder="username" />
-                      <input type="email" placeholder="email" />
-                      <input type="number" placeholder="phone number" />
+                      <input type="text" placeholder="username" required />
+                      <input type="email" placeholder="email" required />
+                      <input
+                        type="number"
+                        placeholder="phone number"
+                        required
+                      />
 
                       <button>Register</button>
                       <p className="message">

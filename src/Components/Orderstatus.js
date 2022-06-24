@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import Header from './Header.js'
-import Subheader from './Subheader.js'
-import Subfooter from './Subfooter.js'
-import Breadcum from './Breadcum.js'
-import { Link } from 'react-router-dom'
-
+import React, { Component } from 'react';
+import Header from './Header.js';
+import Subheader from './Subheader.js';
+import Subfooter from './Subfooter.js';
+import Breadcum from './Breadcum.js';
+import { Link } from 'react-router-dom';
+import Datafetch from "./Datafetch.js";
 export class Orderstatus extends Component {
   render() {
     return (
@@ -15,16 +15,23 @@ export class Orderstatus extends Component {
         <div className="wrap-12">
         <div className="container">
           <div className="row bag-14">
-            <div className="col-md-12">
+           {
+            Datafetch.map((element => {
+              return (
+                <>
+                <div className="col-md-12" key={element.id17}>
                 <div className="bag-67">
-                  <h6>Delivery Address</h6>
-                  <h5>Arshad Khan</h5>
-                  <p> Block F, Abul Fazal Enclave Part 1 Okhla, Jamia Nagar, Thokar no 4 New Delhi - 110025</p>
-                  <span>Phone-Number</span>
-                  <span className='span'>9818xxxxx</span>
-
+                  <h6>{element.deliveryAdd}</h6>
+                  <h5>{element.deliveryName}</h5>
+                  <p>{element.deliveryAddress}</p>
+                  <span>{element.phoneName}</span>
+                  <span className='span'>{element.phonenumber}</span>
                 </div>
             </div>
+                </>
+              )
+            }))
+           }
             <div className="col-md-12">
             <Link to="/orderpage">
                 <div className="bag-64">
@@ -32,28 +39,28 @@ export class Orderstatus extends Component {
                     <div className="col-md-2">
                       <img
                         src={
-                          "https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750722/Ecommerce/acer-v-17-nitro-realsense.jpg"
+                          "https://growngaming.com/wp-content/uploads/2017/04/rotw3-1.jpg"
                         }
                         alt=""
                         className="bag-64"
                       />
                     </div>
-                    <div className="col-md-3 bag-70">
-                      <h6>Lenove Laptop</h6> <br />
+                  {
+                    Datafetch.map((element => {
+                      return (
+                        <div className="col-md-3 bag-70" key={element.id18}>
+                      <h6>{element.name3}</h6> <br />
                       <div className="parad">
-                        <p>Color:Blue</p>
-                        <p>Seller:Himotech</p>
-                        {/* <p>₹455</p> */}
-                        <h2>₹70,000</h2>
-                        <p className="bag-71">2 Offers Applied</p>
+                        <p>{element.color3}</p>
+                        <p>{element.seller}</p>
+                        <h2>₹{element.price18}</h2>
+                        <p className="bag-71">{element.offerPrice}</p>
                       </div>
                     </div>
-                    {/* <div className="col-md-1">
-                      
-                    </div> */}
+                      )
+                    }))
+                  }
                     <div className="col-md-6 hh-grayBox  pb20">
-              
- 
 						{/* <div class="col-12 col-md-10 "> */}
 							<div class="row justify-content-between">
 								<div class="order-tracking completed">
@@ -74,8 +81,6 @@ export class Orderstatus extends Component {
                 <p className='bag-72'>Your Item has been Delivered Soon!</p>
 							</div>
 						{/* </div> */}
-				
-
                     </div>
                   </div>
                 </div>
@@ -83,12 +88,10 @@ export class Orderstatus extends Component {
             </div>
           </div>
         </div>
-
         </div>
         <Subfooter/>
       </>
-    )
-  }
-}
-
-export default Orderstatus
+    );
+  };
+};
+export default Orderstatus;

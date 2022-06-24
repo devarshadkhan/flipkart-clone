@@ -1,4 +1,4 @@
-import React, {useEffect, useState, } from 'react';
+import React,{useState} from 'react';
 import { Outlet, Link } from "react-router-dom";
 import $ from 'jquery'
 import { useSelector } from "react-redux";
@@ -6,32 +6,21 @@ import Menu from '@mui/material/Menu';
 import { Badge } from "@mui/material";
 import { useDispatch } from "react-redux";
 
-
 const Subheader = ()=> {
 
+// const getdata = useSelector((state)=> state.cartreducer.carts);
+//         console.log(getdata);
 
-  // const [price,setPrice] = useState(0);
-  // console.log(price);
+//         const [anchorEl, setAnchorEl] = useState(null);
+//         const open = Boolean(anchorEl);
+//         const handleClick = (event) => {
+//             setAnchorEl(event.currentTarget);
+//         };
+//         const handleClose = () => {
+//             setAnchorEl(null);
+//         };
 
-        // const getdata = useSelector((state)=> state.cartreducer.carts);
-        // console.log(getdata);
 
-
-
-//  const dispatch = useDispatch();
-
-
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-      setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-      setAnchorEl(null);
-  };
-//   const dlt = (id)=>{
-//     dispatch(DLT(id))
-// }
 
 
       $(document).ready(function() {  
@@ -376,12 +365,9 @@ $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
                   <li className="nav-item">
                   {/* <Link to=""  onClick={handleClick}><i className="fa fa-cart-plus"></i>
                   </Link> */}
-                 <Link to='/Addtocart'>
+                  <Link to='/Addtocart'>
                  <Badge badgeContent={1} color="primary" id="basic-button"
-                        aria-controls={open ? 'basic-menu' : undefined}
-                        aria-haspopup="true"
-                        aria-expanded={open ? 'true' : undefined}
-                        onClick={handleClick}>
+                    >
                         <i className="fa fa-cart-plus"></i>
                   </Badge>
                  </Link>

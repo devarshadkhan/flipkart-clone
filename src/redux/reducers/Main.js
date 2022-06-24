@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
-import { cartreducer } from "./Reducer";
+import { cartreducer } from "./Reducers";
 
 
 const rootred = combineReducers({
@@ -7,4 +7,4 @@ const rootred = combineReducers({
 });
 
 
-export default rootred 
+export default rootred
