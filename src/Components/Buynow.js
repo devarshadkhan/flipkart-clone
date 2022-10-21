@@ -112,7 +112,7 @@ export default class Buynow1 extends Component {
                       </span>
                       <p className="bag-41">{element.DName20}</p>
                     </div>
-                    <div class="_p-add-cart">
+                    {/* <div class="_p-add-cart">
                       <div class="_p-qty">
                         <span>{element.EName20}</span>
                         <div
@@ -131,7 +131,7 @@ export default class Buynow1 extends Component {
                           +
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                     <div class="_p-features">
                       <span>{element.FName20}</span>
                       <ul>

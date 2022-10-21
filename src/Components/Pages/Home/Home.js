@@ -48,6 +48,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
       <div className="wrap-4">
         <div className="container-fluid">
           <div className="row">
@@ -81,7 +82,8 @@ const Home = () => {
               autoplayHoverPause
               responsiveClass
             >
-              {Datafetch &&
+              {
+                Datafetch &&
                 Datafetch.map((element) => {
                   return (
                     <>
@@ -190,6 +192,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      
       <div className="wrap-4">
         <div className="container-fluid">
           <div className="row">
