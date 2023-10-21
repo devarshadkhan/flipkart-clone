@@ -5,16 +5,13 @@ import Subheader from "./Subheader";
 import Subfooter from "./Subfooter";
 import Pagecount from "./Pagecount";
 import Img55 from "./Images/img55.svg";
-import Datafetch from "./Datafetch";
-// import $ from "jquery"
-export default class Filterpage2 extends Component {
-  render() {
-    return (
-      <>
-        <Header />
-        <Subheader />
+import Datafetch from "../utils/Datafetch";
 
-        <div className="container-fluid">
+const Orderpage = () => {
+  return (
+    <>
+
+<div className="container-fluid">
           <div class="row bag-61">
             <div class="col-md-3 bag-45 ">
               <div className="bag-31 shadow">
@@ -165,8 +162,8 @@ export default class Filterpage2 extends Component {
             </div>
           </div>
         </div>
-        <Subfooter />
-      </>
-    );
-  };
-};
+    </>
+  )
+}
+
+export default Orderpage

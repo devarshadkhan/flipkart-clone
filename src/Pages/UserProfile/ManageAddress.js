@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import Header from "../Header";
-import Subheader from "../Subheader";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-import Datafetch from "../Datafetch.js";
+import Datafetch from "../../utils/Datafetch";
 // import payment from "./Images/payment.svg";
 import payment from "../Images/payment.svg";
 import { Link } from "react-router-dom";
-import Footer from "../Subfooter";
 import Sidebar from "./Sidebar";
 const ManageAddress = () => {
   const [validated, setValidated] = useState(false);
@@ -27,8 +24,7 @@ const ManageAddress = () => {
   };
   return (
     <>
-      <Header />
-      <Subheader />,
+      
       {Datafetch.map((element) => {
         return (
           <>
@@ -347,7 +343,7 @@ const ManageAddress = () => {
           </>
         );
       })}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

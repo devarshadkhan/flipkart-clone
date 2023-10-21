@@ -1,18 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Header from "../../Header.js";
-import Subheader from "../../Subheader.js";
-import Footer from "../../Subfooter.js";
-import Slide from "../../Slide.js";
-import Offer from "../../Offer.js";
-import Delivery from "../../Delivery.js";
-import Deliverystatus from "../../Deliverystatus.js";
+
+// import Footer from "../../Subfooter.js";
+import Slide from "../../Components/Slide.js";
+import Offer from "../../Components/Offer.js";
+// import Delivery from "../../Delivery.js";
+// import Deliverystatus from "../../Deliverystatus.js";
 // import Payment from '../../payment.js';
 import OwlCarousel from "react-owl-carousel";
 // import Heart from "react-animated-heart";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import Datafetch from "../../Datafetch.js";
+import Datafetch from "../../utils/Datafetch.js";
 // import { useDispatch } from "react-redux";
 
 // import { ADD } from '../redux/actions/action';
@@ -39,8 +38,7 @@ const Home = () => {
   return (
     <>
       <div className="bag-111"></div>
-      <Header />
-      <Subheader />
+      
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
@@ -981,9 +979,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Delivery />
-      <Deliverystatus />
-      <Footer />
+      {/* <Delivery />
+      <Deliverystatus /> */}
+      {/* <Footer /> */}
     </>
   );
 };

@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-export default class Asidefilter1 extends Component {
-  render() {
-    return (
-      <>
-        <div class="col-md-3 col-sm-12 bag-45">
+const Asidefilter = () => {
+  return (
+    <>
+       <div class="col-md-3 col-sm-12 bag-45">
           <div className="bag-31 shadow">
             <div class="wrapper center-block hidden-xs">
               <div class="filters-text">
@@ -759,7 +758,8 @@ export default class Asidefilter1 extends Component {
             </div>
           </div>
         </div>
-      </>
-    );
-  }
+    </>
+  )
 }
+
+export default Asidefilter

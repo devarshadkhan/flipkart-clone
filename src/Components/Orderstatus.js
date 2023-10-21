@@ -4,14 +4,12 @@ import Subheader from './Subheader.js';
 import Subfooter from './Subfooter.js';
 import Breadcum from './Breadcum.js';
 import { Link } from 'react-router-dom';
-import Datafetch from "./Datafetch.js";
-export class Orderstatus extends Component {
-  render() {
-    return (
-      <>
-        <Header/>
-        <Subheader/>
-        <Breadcum/>
+import Datafetch from "../utils/Datafetch";
+
+const Orderstatus = () => {
+  return (
+    <>
+      <Breadcum/>
         <div className="wrap-12">
         <div className="container">
           <div className="row bag-14">
@@ -89,9 +87,8 @@ export class Orderstatus extends Component {
           </div>
         </div>
         </div>
-        <Subfooter/>
-      </>
-    );
-  };
-};
-export default Orderstatus;
+    </>
+  )
+}
+
+export default Orderstatus

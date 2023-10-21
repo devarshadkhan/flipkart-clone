@@ -5,13 +5,12 @@ import Subheader from "./Subheader";
 import Subfooter from "./Subfooter";
 import Pagecount from "./Pagecount";
 import Asidefilter from "./Asidefilter";
-import Datafetch from "./Datafetch";
+import Datafetch from "../utils/Datafetch";
 
 const Laptop = () => {
   return (
     <>
-      <Header />
-      <Subheader />
+     
       <section class="filter">
         <div class="container-fluid">
           <div class="row mb-5">
@@ -148,7 +147,6 @@ const Laptop = () => {
               </div>
       </section>
 
-      <Subfooter />
     </>
   );
 };

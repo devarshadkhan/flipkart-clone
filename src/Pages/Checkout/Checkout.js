@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import Header from "../Header";
-import Subheader from "../Subheader";
 import Form from "react-bootstrap/Form";
 import Payment from "../Payment/Payment";
 import { Link } from "react-router-dom";
-import Datafetch from "../Datafetch";
 import payment from "../Images/payment.svg";
-import Subfooter from "../Subfooter";
+import datafetch from "../../utils/Datafetch";
 const Checkout = () => {
 
   // Count
@@ -21,9 +18,7 @@ const Checkout = () => {
 
   return (
     <>
-      <Header />
-      <Subheader/>
-
+     
       <div className="wrap-23">
         <div className="container-fluid">
           <div className="row bag-14">
@@ -473,7 +468,7 @@ const Checkout = () => {
                    <Payment/>     
             </div>
             
-            {Datafetch.map((element) => {
+            {datafetch.map((element) => {
               return (
                 <>
             <div className="col-md-4">
@@ -535,7 +530,6 @@ const Checkout = () => {
           </div>
         </div>
       </div>
-      <Subfooter/>
     </>
   );
 };

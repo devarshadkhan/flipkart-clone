@@ -6,17 +6,16 @@ import { Link } from "@mui/material";
 import Offer from "./Images/offer.png";
 import payment from "./Images/payment.svg";
 import flipkart from "./Images/flipkart.png";
-import Datafetch from "./Datafetch.js";
 import $ from "jquery";
+import datafetch from "../utils/Datafetch";
 export default class Addtocart extends Component {
   render() {
     return (
       <>
-        <Header />
-        <Subheader />
+      
         <div className="wrap-13">
           <div className="container">
-            {Datafetch.map((element) => {
+            {datafetch.map((element) => {
               return (
                 <>
                   <div className="row bag-14" key={element.id19}>
@@ -196,7 +195,6 @@ export default class Addtocart extends Component {
             })}
           </div>
         </div>
-        <Subfooter />
       </>
     );
   }

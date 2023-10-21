@@ -7,10 +7,10 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-import Datafetch from "./Datafetch.js";
 import payment from "./Images/payment.svg";
 import { Link } from "react-router-dom";
 import Footer from "./Subfooter";
+import datafetch from "../utils/Datafetch";
 const Buynow1 = () => {
   const [validated, setValidated] = useState(false);
 
@@ -25,9 +25,8 @@ const Buynow1 = () => {
   };
   return (
     <>
-      <Header />
-      <Subheader />,
-      {Datafetch.map((element) => {
+    
+      {datafetch.map((element) => {
         return (
           <>
             <div className="wrap-12 wrap-13">
@@ -342,7 +341,7 @@ const Buynow1 = () => {
           </>
         );
       })}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

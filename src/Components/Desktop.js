@@ -4,15 +4,13 @@ import Header from "./Header";
 import Subheader from "./Subheader";
 import Subfooter from "./Subfooter";
 import Asidefilter from "./Asidefilter";
-import Datafetch from "./Datafetch";
+import Datafetch from "../utils/Datafetch";
 import Pagecount from "./Pagecount";
-export default class Desktop extends Component {
-  render() {
-    return (
-      <>
-        <Header />
-        <Subheader />
-        <section class="filter">
+
+const Desktop = () => {
+  return (
+  <>
+    <section class="filter">
           <div class="container-fluid">
             <div class="row mb-5">
               <Asidefilter />
@@ -147,8 +145,8 @@ export default class Desktop extends Component {
             </div>
           </div>
         </section>
-        <Subfooter />
-      </>
-    );
-  }
+  </>
+  )
 }
+
+export default Desktop

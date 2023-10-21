@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-export default class Breadcum1 extends Component {
-  render() {
-    return (
-      <>
-        <div className="wrap-5">
+
+const Breadcum = () => {
+  return (
+    <>
+       <div className="wrap-5">
           <div className="container">
             <div className="row bag-14 ">
               <div className="col-md-12">
@@ -74,7 +74,8 @@ export default class Breadcum1 extends Component {
             </div>
           </div>
         </div>
-      </>
-    );
-  }
+    </>
+  )
 }
+
+export default Breadcum

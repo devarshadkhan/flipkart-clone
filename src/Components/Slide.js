@@ -9,13 +9,12 @@ import background1 from "./Images/bg2.jpg";
 import background2 from "./Images/bg3.png";
 import background3 from "./Images/bg4.png";
 import background4 from "./Images/bg6.jpeg";
-
 import { Navigation } from "swiper";
-export default class slide extends Component {
-  render() {
-    return (
-      <>
-        <div className="wrap-3">
+
+const Slide = () => {
+  return (
+    <>
+      <div className="wrap-3">
           <div className="container-fluid">
             <div className="row">
               <div className="col-md-12">
@@ -23,25 +22,25 @@ export default class slide extends Component {
                   navigation={true}
                   modules={[Navigation]}
                   className="mySwiper"
-                  breakpoints={{
-                    576: {
-                      width: 576,
-                      slidesPerView: 1,
-                    },
-                    768: {
-                      width: 768,
-                      slidesPerView: 1,
-                    },
-                    1200: {
-                      width: 1320,
-                      slidesPerView: 1,
-                    },
-                  }}
+                  // breakpoints={{
+                  //   576: {
+                  //     width: 576,
+                  //     slidesPerView: 1,
+                  //   },
+                  //   768: {
+                  //     width: 768,
+                  //     slidesPerView: 1,
+                  //   },
+                  //   1200: {
+                  //     width: 1920,
+                  //     slidesPerView: 1,
+                  //   },
+                  // }}
                   spaceBetween={0}
                   slidesPerView={1}
                 >
                   <SwiperSlide
-                    style={{ backgroundImage: `url(${background})` }}
+                    style={{ backgroundImage: `url(${background})`, height:"auto",width:"100%" }}
                     className="bag-3"
                   ></SwiperSlide>
                   <SwiperSlide
@@ -65,7 +64,8 @@ export default class slide extends Component {
             </div>
           </div>
         </div>
-      </>
-    );
-  };
-};
+    </>
+  )
+}
+
+export default Slide

@@ -70,6 +70,9 @@ nav .bag-1 {
 }
 .bag-3 {
   width: 100% !important;
+  /* height: 400px !important; */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .swiper-button-next {
   background-color: #fff;
@@ -1027,8 +1030,8 @@ a {
 .bag-22 {
   margin: 0 145px;
   position: absolute;
-  top: -1px;
-  left: 60px;
+  top: 0px;
+  left: 55px;
   z-index: -19;
 }
 .dropdown-item {
@@ -4354,4 +4357,14 @@ th {
   font-size: 13px !important;
   padding: 10px !important;
   text-align: justify;
+}
+
+
+.swiper-button-next:after, .swiper-button-prev:after {
+   
+    font-size: 17px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
 }

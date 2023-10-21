@@ -5,11 +5,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/bundle";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Electronics from "./Components/Pages/Electronics/Electronics.js";
-import Men from "./Components/Pages/Men/Men.js";
-import Women from "./Components/Pages/Women/Women.js";
-import Tvappliance from "./Components/Pages/TV&Appliance/Tvappliance.js";
-import Home from "./Components/Pages/Home/Home.js";
+import Electronics from "./Pages/Electronics/Electronics.js";
+import Men from "./Pages/Men/Men.js";
+import Women from "./Pages/Women/Women.js";
+import Tvappliance from "./Pages/TV&Appliance/Tvappliance.js";
+import Home from "./Pages/Home/Home.js";
 import Buynow from "./Components/Buynow";
 import Payments from "./Components/Payments";
 import Login from "./Components/Login";
@@ -31,8 +31,8 @@ import Addtocart from "./Components/Addtocart";
 import Buynow1 from "./Components/Buynow1";
 import User from "./Components/UserProfile/User";
 import PanCard from "./Components/UserProfile/PanCard";
-import ManageAddress from "./Components/UserProfile/ManageAddress";
-import Checkout from "./Components/Checkout/Checkout";
+import ManageAddress from "./Pages/UserProfile/ManageAddress";
+import Checkout from "./Pages/Checkout/Checkout";
 import LoginRegister from "./Components/LoginRegister/Login";
 import Register from "./Components/LoginRegister/Register";
 import About from "./Components/About/About";
@@ -49,13 +49,17 @@ import ReturnPolicy from "./Components/HelpCenter/ReturnPolicy";
 import Termofuse from "./Components/HelpCenter/Termofuse";
 import Security from "./Components/HelpCenter/Security";
 import PrivacyPolicy from "./Components/HelpCenter/PrivacyPolicy";
-import Contact from "./Components/Pages/Contact/Contact";
+import Contact from "./Pages/Contact/Contact";
 // import Product from './Components/Product';
-
+import Header from "./Components/Header";
+import Subfooter from "./Components/Subfooter";
+import Subheader from "./Components/Subheader";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Header />
+      <Subheader />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tvappliance" element={<Tvappliance />} />
@@ -65,18 +69,14 @@ function App() {
           <Route path="/buynow" element={<Buynow />} />
           <Route path="/payments" element={<Payments />} />
           {/* <Route path="/login" element={<Login />} /> */}
-          <Route path="/offer" element={<Offer />} />
-          <Route path="/delivery" element={<Delivery />} />
-          <Route path="/deliverystatus" element={<Deliverystatus />} />
-          <Route path="/Laptop" element={<Laptop />} />
-          <Route path="/Orderstatus" element={<Orderstatus />} />
-          <Route path="/asidefilter" element={<Asidefilter />} />
+          <Route path="/laptop" element={<Laptop />} />
+          <Route path="/orderstatus" element={<Orderstatus />} />
           <Route path="/desktop" element={<Desktop />} />
           <Route path="/pagecount" element={<Pagecount />} />
           <Route path="/cartdetails" element={<Cartdetails />} />
           <Route path="*" element={<ErrorPage />} />
           <Route path="/orderpage" element={<Orderpage />} />
-          <Route path="/Addtocart" element={<Addtocart />} />
+          <Route path="/addtocart" element={<Addtocart />} />
           <Route path="/buynow1" element={<Buynow1 />} />
           <Route path="/user-profile" element={<User />} />
           <Route path="/user-pan-card" element={<PanCard />} />
@@ -89,7 +89,6 @@ function App() {
           <Route path="/payment" element={<Payment />} />
           <Route path="/shipping" element={<Shipping />} />
           <Route path="/flipkart-plus" element={<HelpCenter />} />
-          <Route path="/sidebar" element={<Sidebar />} />
           <Route path="/order" element={<Order />} />
           <Route path="/cancellationandreturn" element={<Cancellationandreturn />} />
           <Route path="/card-payments" element={<CardPayments />} />
@@ -100,6 +99,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Subfooter />
       </BrowserRouter>
     </div>
   );
